@@ -2,6 +2,8 @@
 
 import { Hero } from "@/components/Hero";
 import { Projects } from "@/components/projects";
+import { Skills } from "@/components/skills";
+
 export default function Home() {
   return (
     <main
@@ -10,6 +12,7 @@ export default function Home() {
     >
       <Hero />
       <Projects />
+      <Skills />
     </main>
   );
 }

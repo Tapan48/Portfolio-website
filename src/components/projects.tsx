@@ -93,7 +93,7 @@ export function Projects() {
             viewport={{ once: true }}
             className="text-7xl text-white font-bold"
           >
-            My <span className="text-white">Projects</span>
+            My <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">Projects</span>
           </motion.h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
