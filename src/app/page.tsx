@@ -1,6 +1,7 @@
 "use client";
 
 import { Hero } from "@/components/Hero";
+import { Projects } from "@/components/projects";
 export default function Home() {
   return (
     <main
@@ -8,6 +9,7 @@ export default function Home() {
       style={{ backgroundColor: "oklch(0.205 0 0)" }}
     >
       <Hero />
+      <Projects />
     </main>
   );
 }
