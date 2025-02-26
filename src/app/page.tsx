@@ -1,5 +1,6 @@
 "use client";
 
+import { Footer } from "@/components/footer";
 import { Hero } from "@/components/Hero";
 import { MessageMe } from "@/components/MessageMe";
 import { Projects } from "@/components/projects";
@@ -14,6 +15,7 @@ export default function Home() {
       <Projects />
       <Skills />
       <MessageMe />
+      <Footer />
     </main>
   );
 }
