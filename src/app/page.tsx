@@ -1,9 +1,9 @@
 "use client";
 
 import { Hero } from "@/components/Hero";
+import { MessageMe } from "@/components/MessageMe";
 import { Projects } from "@/components/projects";
 import { Skills } from "@/components/skills";
-
 export default function Home() {
   return (
     <main
@@ -13,6 +13,7 @@ export default function Home() {
       <Hero />
       <Projects />
       <Skills />
+      <MessageMe />
     </main>
   );
 }
