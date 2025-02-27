@@ -6,12 +6,14 @@ import { MessageMe } from "@/components/MessageMe";
 import { Projects } from "@/components/projects";
 import { Skills } from "@/components/skills";
 import { WorkX } from "@/components/workx";
+import { Navbar } from "@/components/Navbar";
 export default function Home() {
   return (
     <main
       className="flex min-h-screen flex-col items-center justify-between p-24"
       style={{ backgroundColor: "oklch(0.205 0 0)" }}
     >
+      <Navbar />
       <Hero />
       <Projects />
       <Skills />
