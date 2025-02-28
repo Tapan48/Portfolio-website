@@ -64,7 +64,7 @@ export function Hero() {
           <Button
             variant="default"
             size="lg"
-            className="px-8  text-50xl font-bold border-4 border-blue-500 rounded-full"
+            className="px-8  text-[20px] font-bold border-4 border-blue-500 rounded-full"
             onClick={() => window.open("/path-to-resume.pdf", "_blank")}
           >
             Resume
@@ -72,7 +72,7 @@ export function Hero() {
           <Button
             variant="outline"
             size="lg"
-            className="px-8 text-50xl font-bold rounded-full bg"
+            className="px-5 text-[20px]  rounded-full bg"
           >
             Contact Me
           </Button>

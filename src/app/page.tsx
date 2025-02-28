@@ -3,10 +3,10 @@
 import { Footer } from "@/components/footer";
 import { Hero } from "@/components/Hero";
 import { MessageMe } from "@/components/MessageMe";
+import { Navbar } from "@/components/Navbar";
 import { Projects } from "@/components/projects";
 import { Skills } from "@/components/skills";
 import { WorkX } from "@/components/workx";
-import { Navbar } from "@/components/Navbar";
 export default function Home() {
   return (
     <main
