@@ -23,69 +23,91 @@ interface Project {
 }
 
 const projects: Project[] = [
+  
   {
-    title: "Project 1",
+    title: "Task Management API",
     description:
-      "A brief description of project 1. What it does and its main features.",
-    technologies: ["React", "TypeScript", "Node.js", "MongoDB"],
-    githubUrl: "https://github.com/yourusername/project1",
-    liveUrl: "https://project1.com",
-    imageUrl: "/project1.png",
-  },
-  {
-    title: "Project 2",
-    description:
-      "A brief description of project 2. What it does and its main features.",
-    technologies: ["Next.js", "Tailwind CSS", "PostgreSQL"],
-    githubUrl: "https://github.com/yourusername/project2",
-    liveUrl: "https://project2.com",
-    imageUrl: "/project2.png",
+      "A RESTful API built with Express and TypeScript for managing tasks and projects. Features user authentication, role-based access control, and comprehensive documentation.",
+    technologies: ["Express.js", "TypeScript", "MongoDB", "Docker", "JWT"],
+    githubUrl: "https://github.com/yourusername/task-api",
+    liveUrl: "https://task-api-docs.com",
+    imageUrl: "task-api.svg",
   },
   {
     title: "E-Commerce Platform",
     description:
-      "A full-featured e-commerce platform with cart functionality, user authentication, and payment processing.",
-    technologies: ["Next.js", "TypeScript", "Stripe", "Prisma", "PostgreSQL"],
+      "A full-stack e-commerce platform built with Next.js 14, featuring user authentication, shopping cart, payment processing with Stripe, and order management.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Prisma",
+      "PostgreSQL",
+      "Stripe",
+      "Tailwind",
+    ],
     githubUrl: "https://github.com/yourusername/ecommerce",
     liveUrl: "https://ecommerce-demo.com",
-    imageUrl: "/ecommerce.png",
+    imageUrl: "shopping-bag.svg",
   },
   {
-    title: "AI Chat Assistant",
+    title: "Real-time Chat Application",
     description:
-      "An intelligent chatbot powered by machine learning that provides customer support and information.",
-    technologies: ["Python", "TensorFlow", "FastAPI", "React"],
-    githubUrl: "https://github.com/yourusername/ai-chat",
-    liveUrl: "https://ai-chat-demo.com",
-    imageUrl: "/ai-chat.png",
+      "A modern chat application with real-time messaging, file sharing, and user presence. Features end-to-end encryption and message persistence.",
+    technologies: [
+      "React",
+      "Node.js",
+      "Socket.IO",
+      "MongoDB",
+      "Redis",
+      "WebRTC",
+    ],
+    githubUrl: "https://github.com/yourusername/chat-app",
+    liveUrl: "https://chat-app-demo.com",
+    imageUrl: "messages-square.svg",
+  },
+  {
+    title: "AI Task Manager",
+    description:
+      "An AI-powered task management system that helps prioritize tasks, set deadlines, and provides smart suggestions for task completion.",
+    technologies: [
+      "Next.js",
+      "OpenAI API",
+      "Node.js",
+      "PostgreSQL",
+      "Tailwind",
+    ],
+    githubUrl: "https://github.com/yourusername/ai-tasks",
+    liveUrl: "https://ai-tasks-demo.com",
+    imageUrl: "brain-circuit.svg",
   },
   {
     title: "Social Media Dashboard",
     description:
-      "A comprehensive dashboard for managing and analyzing social media metrics across multiple platforms.",
-    technologies: ["Vue.js", "D3.js", "Express", "MongoDB"],
+      "A comprehensive dashboard for social media analytics, featuring real-time data visualization, sentiment analysis, and automated reporting.",
+    technologies: ["React", "D3.js", "Node.js", "MongoDB", "Express"],
     githubUrl: "https://github.com/yourusername/social-dashboard",
     liveUrl: "https://social-dashboard-demo.com",
-    imageUrl: "/dashboard.png",
+    imageUrl: "layout-dashboard.svg",
   },
   {
     title: "Fitness Tracking App",
     description:
-      "A mobile-first web application for tracking workouts, nutrition, and fitness goals with data visualization.",
-    technologies: ["React Native", "Redux", "Firebase", "Chart.js"],
+      "A mobile-responsive fitness tracking application with workout planning, progress monitoring, and nutrition tracking features.",
+    technologies: ["React Native", "TypeScript", "Node.js", "PostgreSQL"],
     githubUrl: "https://github.com/yourusername/fitness-tracker",
-    liveUrl: "https://fitness-tracker-demo.com",
-    imageUrl: "/fitness.png",
+    liveUrl: "https://fitness-app-demo.com",
+    imageUrl: "dumbbell.svg",
   },
+
 ];
 
 const letters = "Projects".split("");
 
 export function Projects() {
   return (
-    <section className="py-16 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="relative inline-block w-full text-center mb-12">
+    <section className="py-24 px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="relative inline-block w-full text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -99,7 +121,7 @@ export function Projects() {
             </span>
           </motion.h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20  w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 w-full">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -107,21 +129,26 @@ export function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
+              className="p-2"
             >
-              <Card className="group hover:shadow-lg transition-all duration-300 overflow-hidden m-5">
-                <CardHeader>
-                  <div className="overflow-hidden rounded-lg mb-4">
+              <Card className="group hover:shadow-lg transition-all duration-300 overflow-hidden border-2 border-gray-700 h-[500px] flex flex-col">
+                <CardHeader className="flex-shrink-0 p-6">
+                  <div className="overflow-hidden rounded-lg mb-6 h-48">
                     <img
                       src={project.imageUrl}
                       alt={project.title}
-                      className="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <CardTitle>{project.title}</CardTitle>
-                  <CardDescription>{project.description}</CardDescription>
+                  <CardTitle className="text-xl mb-3">
+                    {project.title}
+                  </CardTitle>
+                  <CardDescription className="text-sm line-clamp-2">
+                    {project.description}
+                  </CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2">
+                <CardContent className="flex-1 p-6">
+                  <div className="flex flex-wrap gap-3">
                     {project.technologies.map((tech) => (
                       <Badge key={tech} variant="secondary">
                         {tech}
@@ -129,7 +156,7 @@ export function Projects() {
                     ))}
                   </div>
                 </CardContent>
-                <CardFooter className="flex gap-4">
+                <CardFooter className="flex gap-4 mt-auto p-6">
                   {project.githubUrl && (
                     <Button
                       variant="outline"
