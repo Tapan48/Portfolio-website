@@ -93,10 +93,13 @@ export function Projects() {
             viewport={{ once: true }}
             className="text-7xl text-white font-bold"
           >
-            My <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">Projects</span>
+            My{" "}
+            <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
+              Projects
+            </span>
           </motion.h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20  w-full">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -105,7 +108,7 @@ export function Projects() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="group hover:shadow-lg transition-all duration-300 overflow-hidden">
+              <Card className="group hover:shadow-lg transition-all duration-300 overflow-hidden m-5">
                 <CardHeader>
                   <div className="overflow-hidden rounded-lg mb-4">
                     <img

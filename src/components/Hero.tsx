@@ -46,44 +46,50 @@ export function Hero() {
   }, [text, isDeleting, roleIndex, delta]);
 
   return (
-    <div className="flex flex-row items-center justify-evenly gap-x-10 w-full h-auto sm:h-[80vh] bg-purple-500 mr-30">
-      <div className="flex flex-col items-center justify-center space-y-8 text-center bg-red-500 w-1/2 h-full">
+    <div className="flex flex-row items-start justify-between w-full h-auto sm:h-[80vh] px-10 pt-28 ">
+      <div className="flex flex-col items-start justify-start space-y-8 text-left w-1/2">
         <div className="space-y-4">
-          <h1 className="text-50xl font-bold text-white sm:text-6xl">
+          <h1 className="text-70xl font-bold text-white sm:text-6xl">
             Hello, I&apos;m
           </h1>
-          <div className="flex items-center justify-center">
-            <div className="text-3xl sm:text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
+          <div className="flex items-center ">
+            <div className="text-70xl sm:text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
               {text}
             </div>
             <div className="w-[3px] h-[40px] sm:h-[56px] bg-purple-500 ml-1 animate-blink" />
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-10 mt-8">
+        <div className="flex flex-colsm:flex-row gap-10  pt-6">
           <Button
             variant="default"
             size="lg"
-            className="px-8 border-4 border-blue-500  rounded-full"
+            className="px-8  text-50xl font-bold border-4 border-blue-500 rounded-full"
             onClick={() => window.open("/path-to-resume.pdf", "_blank")}
           >
             Resume
           </Button>
-          <Button variant="outline" size="lg" className="px-8 rounded-full bg">
+          <Button
+            variant="outline"
+            size="lg"
+            className="px-8 text-50xl font-bold rounded-full bg"
+          >
             Contact Me
           </Button>
         </div>
       </div>
 
-      <div className="w-60 h-full sm:w-60 sm:h-60 bg-green-500">
-        <Image
-          src="/webdev.png"
-          alt="Web Development Illustration"
-          width={200}
-          height={200}
-          className="w-full h-full object-cover rounded-full shadow-lg"
-          priority
-        />
+      <div className="w-1/2 flex justify-center items-start  h-full -mt-16 -ml-10">
+        <div className="rounded-full border-4 p-2 bg-gray-200">
+          <Image
+            src="/webdev.png"
+            alt="Web Development Illustration"
+            width={400}
+            height={400}
+            className="object-cover rounded-full shadow-lg"
+            priority
+          />
+        </div>
       </div>
     </div>
   );

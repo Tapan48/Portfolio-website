@@ -1,6 +1,8 @@
 "use client";
 
 import ModeToggle from "@/components/ui/mode-toggle";
+
+
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -68,7 +70,7 @@ function ListItem({ className, title, href, children }: ListItemProps) {
 
 export function Navbar() {
   return (
-    <div className="fixed top-0 h-16 w-full z-50 flex justify-between items-center px-4 py-2 bg-background/80 backdrop-blur-sm border-b">
+    <div className="fixed top-0 h-16 w-full z-50 flex justify-between items-center px-4 py-2 bg-background/80 backdrop-blur-sm border-b bg">
       <Link href="/" className="flex items-center space-x-2">
         <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
           TG
