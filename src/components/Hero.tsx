@@ -46,13 +46,16 @@ export function Hero() {
   }, [text, isDeleting, roleIndex, delta]);
 
   return (
-    <div className="flex flex-row items-start justify-evenly w-full h-auto sm:h-[80vh] px-10 pt-32">
+    <div
+      id="hero"
+      className="flex flex-row items-start justify-evenly w-full h-auto sm:h-[75vh] px-10 pt-32"
+    >
       <div className="flex flex-col items-start justify-evenly space-y-8 text-left w-1/2 mt-18 ml-32">
         <div className="space-y-4">
           <h1 className="text-[28px] font-bold text-white sm:text-6xl">
             Hello, I&apos;m
           </h1>
-          <div className="flex items-center">
+          <div className="flex items-center ">
             <div className="text-[36px] sm:text-7xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text whitespace-nowrap">
               {text}
             </div>
@@ -79,7 +82,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="w-1/2 flex justify-center items-start h-full -mt-16">
+      <div className="w-1/2 flex justify-end items-start h-full -mt-16 mr-16">
         <div className="rounded-full border-4 p-2 bg-gray-200">
           <Image
             src="/webdev.png"

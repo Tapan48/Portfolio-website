@@ -1,7 +1,5 @@
 "use client";
 
-import ModeToggle from "@/components/ui/mode-toggle";
-
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -11,6 +9,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -70,8 +69,38 @@ function ListItem({ className, title, href, children }: ListItemProps) {
 }
 
 export function Navbar() {
+  const [isVisible, setIsVisible] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      const projectsSection = document.querySelector("#projects");
+
+      if (projectsSection) {
+        const projectsTop = projectsSection.getBoundingClientRect().top;
+
+        // Hide navbar when reaching projects section
+        if (projectsTop <= 0) {
+          setIsVisible(false);
+        } else {
+          setIsVisible(true);
+        }
+      }
+
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos]);
+
   return (
-    <div className="fixed top-0 h-16 w-full z-50 flex justify-between items-center px-4 py-2 bg-[oklch(0.13_0.028_261.692)]/80 backdrop-blur-sm border-b">
+    <div
+      className={`fixed top-0 h-16 w-full z-50 flex justify-between items-center px-4 py-2 bg-[oklch(0.13_0.028_261.692)]/80 backdrop-blur-sm border-b transition-transform duration-300 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="w-32">
         {" "}
         {/* Added fixed width container */}
@@ -122,8 +151,6 @@ export function Navbar() {
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
-
-
       </div>
     </div>
   );

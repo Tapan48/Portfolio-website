@@ -7,7 +7,10 @@ import { motion } from "framer-motion";
 
 export function MessageMe() {
   return (
-    <section id="contact" className="py-16 px-4 w-full flex flex-col items-center">
+    <section
+      id="contact"
+      className="py-16 px-4 w-full flex flex-col items-center"
+    >
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -15,9 +18,18 @@ export function MessageMe() {
         viewport={{ once: true }}
         className="text-4xl md:text-7xl text-center font-bold mb-16"
       >
-        Message{" "}
-        <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
-          Me
+        <span className="relative">
+          <motion.span
+            className="absolute inset-0 rounded-lg bg-gradient-to-r from-indigo-300 to-purple-300 dark:from-indigo-500 dark:to-purple-500"
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 2, ease: "easeInOut" }}
+            viewport={{ once: true }}
+            style={{ originX: 0 }}
+          />
+          <span className="relative z-10 text-black dark:text-black">
+            Message Me
+          </span>
         </span>
       </motion.h2>
       <div className="w-full max-w-2xl space-y-12">

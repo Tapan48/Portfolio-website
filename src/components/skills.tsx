@@ -58,7 +58,7 @@ const skillCategories: SkillCategory[] = [
 
 export function Skills() {
   return (
-    <section id="skills" className="py-24 px-6">
+    <section className="py-16">
       <div className="max-w-100xl w-full mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -69,8 +69,18 @@ export function Skills() {
         >
           These are the skills I have
           <br />
-          <span className="bg-gradient-to-r from-purple-400 to-pink-600 m-2 text-transparent bg-clip-text bg-red-500">
-            learned in my coding journey
+          <span className="relative inline-block">
+            <motion.span
+              className="absolute inset-0 rounded-lg bg-gradient-to-r from-indigo-300 to-purple-300 dark:from-indigo-500 dark:to-purple-500"
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              transition={{ duration: 2, ease: "easeInOut" }}
+              viewport={{ once: true }}
+              style={{ originX: 0 }}
+            />
+            <span className="relative z-10 text-black dark:text-black">
+              learned in my coding journey
+            </span>
           </span>
         </motion.h2>
 

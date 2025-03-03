@@ -18,7 +18,10 @@ export default function Home() {
       <div className="-mt-40">
         <Projects />
       </div>
+      
       <Skills />
+
+     
       <WorkX />
       <MessageMe />
       <Footer />

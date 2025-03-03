@@ -114,8 +114,18 @@ export function Projects() {
             className="text-7xl text-white font-bold"
           >
             My{" "}
-            <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
-              Projects
+            <span className="relative">
+              <motion.span
+                className="absolute inset-0 rounded-lg bg-gradient-to-r from-indigo-300 to-purple-300 dark:from-indigo-500 dark:to-purple-500"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                transition={{ duration: 2, ease: "easeInOut" }}
+                viewport={{ once: true }}
+                style={{ originX: 0 }}
+              />
+              <span className="relative z-10 text-black dark:text-black">
+                Projects
+              </span>
             </span>
           </motion.h2>
         </div>
