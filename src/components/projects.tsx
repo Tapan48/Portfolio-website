@@ -131,7 +131,7 @@ export function Projects() {
               viewport={{ once: true }}
               className="p-2"
             >
-              <Card className="group hover:shadow-lg transition-all duration-300 overflow-hidden border-2 border-gray-700 h-[500px] flex flex-col">
+              <Card className="group hover:shadow-lg transition-all duration-300 overflow-hidden border-4 border-white h-[500px] flex flex-col">
                 <CardHeader className="flex-shrink-0 p-6">
                   <div className="overflow-hidden rounded-lg mb-6 h-48">
                     <img

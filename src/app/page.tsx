@@ -10,12 +10,14 @@ import { WorkX } from "@/components/workx";
 export default function Home() {
   return (
     <main
-      className="flex min-h-screen flex-col items-center justify-between p-24"
+      className="flex min-h-screen flex-col items-center justify-between pt-24"
       style={{ backgroundColor: "oklch(0.205 0 0)" }}
     >
       <Navbar />
       <Hero />
-      <Projects />
+      <div className="-mt-40">
+        <Projects />
+      </div>
       <Skills />
       <WorkX />
       <MessageMe />
