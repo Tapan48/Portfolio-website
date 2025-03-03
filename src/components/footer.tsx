@@ -6,7 +6,7 @@ import Link from "next/link";
 export function Footer() {
   const socialLinks = [
     {
-      icon: <Image src="/x.svg" alt="X (Twitter)" width={40} height={40} />,
+      icon: <Image src="/x.svg" alt="X (Twitter)" width={30} height={30} className="mt-1"/>,
       href: "https://x.com/GarasangiTapan",
       label: "Twitter",
     },
