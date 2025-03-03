@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 
 export function WorkX() {
   return (
-    <section id="workx" className="py-16 px-4">
+    <section id="workx" className="min-h-screen flex items-start pt-32 px-4">
       <div className="max-w-6xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl text-center font-bold mb-16"
+          className="text-10xl md:text-7xl text-center font-bold mb-16"
         >
           About{" "}
           <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">

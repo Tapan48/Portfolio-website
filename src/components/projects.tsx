@@ -23,7 +23,6 @@ interface Project {
 }
 
 const projects: Project[] = [
-  
   {
     title: "Task Management API",
     description:
@@ -98,7 +97,6 @@ const projects: Project[] = [
     liveUrl: "https://fitness-app-demo.com",
     imageUrl: "dumbbell.svg",
   },
-
 ];
 
 const letters = "Projects".split("");
