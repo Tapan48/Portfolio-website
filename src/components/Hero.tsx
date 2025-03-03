@@ -45,6 +45,20 @@ export function Hero() {
     return () => clearTimeout(timeout);
   }, [text, isDeleting, roleIndex, delta]);
 
+  const handleViewResume = () => {
+    // Replace this URL with your Google Drive shared link
+    const driveUrl =
+      "https://drive.google.com/file/d/1L5sGCIveCm6PQjtGwIlqfcjSGP7xBlHU/view";
+    window.open(driveUrl, "_blank");
+  };
+
+  const handleContactMe = () => {
+    // Replace with your LinkedIn profile URL
+    const linkedInUrl =
+      "https://www.linkedin.com/in/tapan-garasangi-0ab9b7225/";
+    window.open(linkedInUrl, "_blank");
+  };
+
   return (
     <div
       id="hero"
@@ -68,7 +82,7 @@ export function Hero() {
             variant="default"
             size="lg"
             className="px-8 py-7 text-[20px] font-bold border-4 border-blue-500 rounded-full"
-            onClick={() => window.open("/path-to-resume.pdf", "_blank")}
+            onClick={handleViewResume}
           >
             Resume
           </Button>
@@ -76,6 +90,7 @@ export function Hero() {
             variant="outline"
             size="lg"
             className="px-5 py-7 text-[20px] rounded-full bg"
+            onClick={handleContactMe}
           >
             Contact Me
           </Button>
