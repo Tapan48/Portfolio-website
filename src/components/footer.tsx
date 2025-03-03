@@ -7,24 +7,24 @@ export function Footer() {
   const socialLinks = [
     {
       icon: <Image src="/x.svg" alt="X (Twitter)" width={40} height={40} />,
-      href: "https://twitter.com/yourusername",
+      href: "https://x.com/GarasangiTapan",
       label: "Twitter",
     },
     {
       icon: (
         <Image src="/instagram.svg" alt="Instagram" width={40} height={40} />
       ),
-      href: "https://instagram.com/yourusername",
+      href: "https://www.instagram.com/tapan_1729/",
       label: "Instagram",
     },
     {
       icon: <Image src="/github.svg" alt="GitHub" width={40} height={40} />,
-      href: "https://github.com/yourusername",
+      href: "https://github.com/Tapan48",
       label: "GitHub",
     },
     {
       icon: <Image src="/linkedin.svg" alt="LinkedIn" width={40} height={40} />,
-      href: "https://linkedin.com/in/yourusername",
+      href: "https://www.linkedin.com/in/tapan-garasangi-0ab9b7225/",
       label: "LinkedIn",
     },
   ];
@@ -62,7 +62,9 @@ export function Footer() {
           </div>
 
           <div className="flex justify-end text-base text-white/80">
-            <p className="mr-17">© Made with ❤️ by Tapan. All rights reserved.</p>
+            <p className="mr-17">
+              © Made with ❤️ by Tapan. All rights reserved.
+            </p>
           </div>
         </div>
       </div>
