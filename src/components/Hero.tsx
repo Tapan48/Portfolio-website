@@ -46,21 +46,21 @@ export function Hero() {
   }, [text, isDeleting, roleIndex, delta]);
 
   return (
-    <div className="flex flex-row  items-start justify-evenly w-full h-auto sm:h-[80vh] px-10 pt-32 ">
-      <div className="flex flex-col  items-start justify-evenly space-y-8 text-left w-1/2 mt-18 -mr-14">
+    <div className="flex flex-row items-start justify-evenly w-full h-auto sm:h-[80vh] px-10 pt-32">
+      <div className="flex flex-col items-start justify-evenly space-y-8 text-left w-1/2 mt-18 ml-32">
         <div className="space-y-4">
-          <h1 className="text-[30px] font-bold text-white sm:text-8xl">
+          <h1 className="text-[28px] font-bold text-white sm:text-6xl">
             Hello, I&apos;m
           </h1>
-          <div className="flex items-center ">
-            <div className="text-[36px] sm:text-7xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
+          <div className="flex items-center">
+            <div className="text-[36px] sm:text-7xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text whitespace-nowrap">
               {text}
             </div>
-            <div className="w-[6px] h-[55px] sm:h-[85px] bg-purple-500 ml-1 animate-blink" />
+            <div className="w-[6px] h-[65px] sm:h-[95px] bg-purple-500 ml-1 animate-blink" />
           </div>
         </div>
 
-        <div className="flex flex-colsm:flex-row gap-10  pt-6">
+        <div className="flex flex-colsm:flex-row gap-10 pt-6">
           <Button
             variant="default"
             size="lg"
@@ -79,7 +79,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="w-1/2 flex justify-center items-start  h-full -mt-16 -ml-10">
+      <div className="w-1/2 flex justify-center items-start h-full -mt-16">
         <div className="rounded-full border-4 p-2 bg-gray-200">
           <Image
             src="/webdev.png"

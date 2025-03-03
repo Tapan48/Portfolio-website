@@ -2,7 +2,6 @@
 
 import ModeToggle from "@/components/ui/mode-toggle";
 
-
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -59,7 +58,9 @@ function ListItem({ className, title, href, children }: ListItemProps) {
           }
         }}
       >
-        <div className="text-lg font-medium leading-none text-white">{title}</div>
+        <div className="text-lg font-medium leading-none text-white">
+          {title}
+        </div>
         <p className="line-clamp-2 text-base leading-snug text-muted-foreground">
           {children}
         </p>
@@ -71,11 +72,11 @@ function ListItem({ className, title, href, children }: ListItemProps) {
 export function Navbar() {
   return (
     <div className="fixed top-0 h-16 w-full z-50 flex justify-between items-center px-4 py-2 bg-[oklch(0.13_0.028_261.692)]/80 backdrop-blur-sm border-b">
-      <div className="w-32"> {/* Added fixed width container */}
+      <div className="w-32">
+        {" "}
+        {/* Added fixed width container */}
         <Link href="/" className="flex items-center justify-end">
-          <span className="text-2xl font-bold text-white">
-            Tapan
-          </span>
+          <span className="text-2xl font-bold text-white">Tapan</span>
         </Link>
       </div>
 
@@ -102,7 +103,9 @@ export function Navbar() {
         <NavigationMenu className="md:hidden">
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-white text-lg">Menu</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="text-white text-lg">
+                Menu
+              </NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[200px] gap-3 p-4">
                   {components.map((component) => (
@@ -120,7 +123,7 @@ export function Navbar() {
           </NavigationMenuList>
         </NavigationMenu>
 
-        <ModeToggle />
+
       </div>
     </div>
   );
