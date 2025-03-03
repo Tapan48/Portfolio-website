@@ -59,8 +59,8 @@ function ListItem({ className, title, href, children }: ListItemProps) {
           }
         }}
       >
-        <div className="text-sm font-medium leading-none">{title}</div>
-        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+        <div className="text-lg font-medium leading-none text-white">{title}</div>
+        <p className="line-clamp-2 text-base leading-snug text-muted-foreground">
           {children}
         </p>
       </Link>
@@ -70,20 +70,22 @@ function ListItem({ className, title, href, children }: ListItemProps) {
 
 export function Navbar() {
   return (
-    <div className="fixed top-0 h-16 w-full z-50 flex justify-between items-center px-4 py-2 bg-background/80 backdrop-blur-sm border-b bg">
-      <Link href="/" className="flex items-center space-x-2">
-        <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
-          TG
-        </span>
-      </Link>
+    <div className="fixed top-0 h-16 w-full z-50 flex justify-between items-center px-4 py-2 bg-[oklch(0.13_0.028_261.692)]/80 backdrop-blur-sm border-b">
+      <div className="w-32"> {/* Added fixed width container */}
+        <Link href="/" className="flex items-center justify-end">
+          <span className="text-2xl font-bold text-white">
+            Tapan
+          </span>
+        </Link>
+      </div>
 
       <div className="flex items-center justify-end gap-4">
-        <nav className="hidden md:flex items-center justify-evenly space-x-6 mr-4">
+        <nav className="hidden md:flex items-center justify-evenly space-x-20 mr-4">
           {components.map((component) => (
             <Link
               key={component.title}
               href={component.href}
-              className="text-sm font-bold transition-colors hover:text-primary"
+              className="text-lg font-bold transition-all duration-300 hover:text-white/70 text-white hover:scale-110 hover:bg-gradient-to-r hover:from-purple-400 hover:to-pink-600 hover:bg-clip-text hover:text-transparent"
               onClick={(e) => {
                 e.preventDefault();
                 const element = document.querySelector(component.href);
@@ -100,7 +102,7 @@ export function Navbar() {
         <NavigationMenu className="md:hidden">
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger>Menu</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="text-white text-lg">Menu</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[200px] gap-3 p-4">
                   {components.map((component) => (
