@@ -105,7 +105,7 @@ const letters = "Projects".split("");
 
 export function Projects() {
   return (
-    <section className="py-24 px-6">
+    <section id="projects" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="relative inline-block w-full text-center mb-16">
           <motion.h2
