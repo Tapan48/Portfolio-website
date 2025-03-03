@@ -46,17 +46,17 @@ export function Hero() {
   }, [text, isDeleting, roleIndex, delta]);
 
   return (
-    <div className="flex flex-row items-start justify-between w-full h-auto sm:h-[80vh] px-10 pt-28 ">
-      <div className="flex flex-col items-start justify-start space-y-8 text-left w-1/2">
+    <div className="flex flex-row  items-start justify-evenly w-full h-auto sm:h-[80vh] px-10 pt-32 ">
+      <div className="flex flex-col  items-start justify-evenly space-y-8 text-left w-1/2 mt-18 -mr-14">
         <div className="space-y-4">
-          <h1 className="text-70xl font-bold text-white sm:text-6xl">
+          <h1 className="text-[30px] font-bold text-white sm:text-8xl">
             Hello, I&apos;m
           </h1>
           <div className="flex items-center ">
-            <div className="text-70xl sm:text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
+            <div className="text-[36px] sm:text-7xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
               {text}
             </div>
-            <div className="w-[3px] h-[40px] sm:h-[56px] bg-purple-500 ml-1 animate-blink" />
+            <div className="w-[6px] h-[55px] sm:h-[85px] bg-purple-500 ml-1 animate-blink" />
           </div>
         </div>
 
@@ -64,7 +64,7 @@ export function Hero() {
           <Button
             variant="default"
             size="lg"
-            className="px-8  text-[20px] font-bold border-4 border-blue-500 rounded-full"
+            className="px-8 py-7 text-[20px] font-bold border-4 border-blue-500 rounded-full"
             onClick={() => window.open("/path-to-resume.pdf", "_blank")}
           >
             Resume
@@ -72,7 +72,7 @@ export function Hero() {
           <Button
             variant="outline"
             size="lg"
-            className="px-5 text-[20px]  rounded-full bg"
+            className="px-5 py-7 text-[20px] rounded-full bg"
           >
             Contact Me
           </Button>
