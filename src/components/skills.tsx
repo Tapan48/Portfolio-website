@@ -68,7 +68,7 @@ export function Skills() {
           className="text-10xl md:text-6xl text-center text-white font-bold mb-16"
         >
           These are the skills I have
-          <br />
+          <div className="h-4" />
           <span className="relative inline-block">
             <motion.span
               className="absolute inset-0 rounded-lg bg-gradient-to-r from-indigo-300 to-purple-300 dark:from-indigo-500 dark:to-purple-500"
