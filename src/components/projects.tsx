@@ -23,15 +23,7 @@ interface Project {
 }
 
 const projects: Project[] = [
-  {
-    title: "Task Management API",
-    description:
-      "A RESTful API built with Express and TypeScript for managing tasks and projects. Features user authentication, role-based access control, and comprehensive documentation.",
-    technologies: ["Express.js", "TypeScript", "MongoDB", "Docker", "JWT"],
-    githubUrl: "https://github.com/yourusername/task-api",
-    liveUrl: "https://task-api-docs.com",
-    imageUrl: "task-api.svg",
-  },
+  
   {
     title: "E-Commerce Platform",
     description:
@@ -64,21 +56,21 @@ const projects: Project[] = [
     liveUrl: "https://chat-app-demo.com",
     imageUrl: "messages-square.svg",
   },
-  {
-    title: "AI Task Manager",
-    description:
-      "An AI-powered task management system that helps prioritize tasks, set deadlines, and provides smart suggestions for task completion.",
-    technologies: [
-      "Next.js",
-      "OpenAI API",
-      "Node.js",
-      "PostgreSQL",
-      "Tailwind",
-    ],
-    githubUrl: "https://github.com/yourusername/ai-tasks",
-    liveUrl: "https://ai-tasks-demo.com",
-    imageUrl: "brain-circuit.svg",
-  },
+  // {
+  //   title: "AI Task Manager",
+  //   description:
+  //     "An AI-powered task management system that helps prioritize tasks, set deadlines, and provides smart suggestions for task completion.",
+  //   technologies: [
+  //     "Next.js",
+  //     "OpenAI API",
+  //     "Node.js",
+  //     "PostgreSQL",
+  //     "Tailwind",
+  //   ],
+  //   githubUrl: "https://github.com/yourusername/ai-tasks",
+  //   liveUrl: "https://ai-tasks-demo.com",
+  //   imageUrl: "brain-circuit.svg",
+  // },
   {
     title: "Social Media Dashboard",
     description:
@@ -88,15 +80,7 @@ const projects: Project[] = [
     liveUrl: "https://social-dashboard-demo.com",
     imageUrl: "layout-dashboard.svg",
   },
-  {
-    title: "Fitness Tracking App",
-    description:
-      "A mobile-responsive fitness tracking application with workout planning, progress monitoring, and nutrition tracking features.",
-    technologies: ["React Native", "TypeScript", "Node.js", "PostgreSQL"],
-    githubUrl: "https://github.com/yourusername/fitness-tracker",
-    liveUrl: "https://fitness-app-demo.com",
-    imageUrl: "dumbbell.svg",
-  },
+ 
 ];
 
 const letters = "Projects".split("");
