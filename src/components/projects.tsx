@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
+import Image from "next/image";
 
 interface Project {
   title: string;
@@ -23,7 +24,6 @@ interface Project {
 }
 
 const projects: Project[] = [
-  
   {
     title: "E-Commerce Platform",
     description:
@@ -80,7 +80,6 @@ const projects: Project[] = [
     liveUrl: "https://social-dashboard-demo.com",
     imageUrl: "layout-dashboard.svg",
   },
- 
 ];
 
 const letters = "Projects".split("");
@@ -125,11 +124,12 @@ export function Projects() {
             >
               <Card className="group hover:shadow-lg transition-all duration-300 overflow-hidden border-4 border-white h-[500px] flex flex-col">
                 <CardHeader className="flex-shrink-0 p-6">
-                  <div className="overflow-hidden rounded-lg mb-6 h-48">
-                    <img
+                  <div className="overflow-hidden rounded-lg mb-6 h-48 relative">
+                    <Image
                       src={project.imageUrl}
                       alt={project.title}
-                      className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+                      fill
+                      className="object-cover transform group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                   <CardTitle className="text-xl mb-3">

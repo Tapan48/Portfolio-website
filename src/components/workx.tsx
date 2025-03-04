@@ -112,17 +112,27 @@ export function WorkX() {
                 </CardHeader>
                 <CardContent className="text-black leading-relaxed">
                   I am a Full Stack Web Developer with expertise in frontend
-                  development, specializing in the <span className="font-bold text-purple-500">MERN</span> and <span className="font-bold text-purple-500">Next.js</span> stacks. My
-                  passion lies in creating intuitive and responsive user
-                  interfaces using <span className="font-bold text-purple-500">React</span> and <span className="font-bold text-purple-500">Next.js</span>. With a strong foundation
-                  in <span className="font-bold text-purple-500">HTML</span>, <span className="font-bold text-purple-500">CSS</span>, and <span className="font-bold text-purple-500">JavaScript</span>, I craft seamless and engaging
-                  web experiences. While my focus is on the frontend, I'm also
-                  proficient in <span className="font-bold text-purple-500">Node.js</span>, <span className="font-bold text-purple-500">Express</span>, and <span className="font-bold text-purple-500">MongoDB</span>, allowing me to
-                  understand and work across the entire web stack. As a Data
-                  Science and AI graduate from IIIT Dharwad, I bring analytical
-                  thinking and data-driven insights to my development process,
-                  enhancing the functionality and user experience of the
-                  applications I build.
+                  development, specializing in the{" "}
+                  <span className="font-bold text-purple-500">MERN</span> and{" "}
+                  <span className="font-bold text-purple-500">Next.js</span>{" "}
+                  stacks. My passion lies in creating intuitive and responsive
+                  user interfaces using{" "}
+                  <span className="font-bold text-purple-500">React</span> and{" "}
+                  <span className="font-bold text-purple-500">Next.js</span>.
+                  With a strong foundation in{" "}
+                  <span className="font-bold text-purple-500">HTML</span>,{" "}
+                  <span className="font-bold text-purple-500">CSS</span>, and{" "}
+                  <span className="font-bold text-purple-500">JavaScript</span>,
+                  I craft seamless and engaging web experiences. While my focus
+                  is on the frontend, I&apos;m also proficient in{" "}
+                  <span className="font-bold text-purple-500">Node.js</span>,{" "}
+                  <span className="font-bold text-purple-500">Express</span>,
+                  and <span className="font-bold text-purple-500">MongoDB</span>
+                  , allowing me to understand and work across the entire web
+                  stack. As a Data Science and AI graduate from IIIT Dharwad, I
+                  bring analytical thinking and data-driven insights to my
+                  development process, enhancing the functionality and user
+                  experience of the applications I build.
                 </CardContent>
               </Card>
             </motion.div>
@@ -170,7 +180,75 @@ export function WorkX() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                  I've done well in my studies, scoring <span className="text-blue-400 font-semibold">94.33%</span> in <span className="text-purple-400 font-semibold">10th ICSE</span> (with <span className="text-blue-400 font-semibold">100</span> in Math), <span className="text-blue-400 font-semibold">94.8%</span> in <span className="text-purple-400 font-semibold">12th CBSE</span>, and ranking <span className="text-blue-400 font-semibold">22910</span> in <span className="text-purple-400 font-semibold">JEE Mains</span> with a <span className="text-blue-400 font-semibold">97.95</span> percentile. In my work, I've made important contributions to different projects. At <span className="text-purple-400 font-semibold">DiligenceAI</span>, I improved <span className="text-purple-400 font-semibold">LinkedIn</span> data handling, which led to <span className="text-blue-400 font-semibold">20%</span> faster performance, <span className="text-blue-400 font-semibold">30%</span> better search results, and <span className="text-blue-400 font-semibold">15%</span> more user activity. At <span className="text-purple-400 font-semibold">Alamnack Technologies</span>, I built a reading app with AI-created book summaries and set up the backend on <span className="text-purple-400 font-semibold">AWS EC2</span>. At <span className="text-purple-400 font-semibold">Techjet.ai</span>, I created APIs for the <span className="text-purple-400 font-semibold">Digi Seva</span> project using <span className="text-purple-400 font-semibold">MongoDB</span>, <span className="text-purple-400 font-semibold">Express.js</span>, and <span className="text-purple-400 font-semibold">Node.js</span>. These experiences have improved my skills in both frontend and backend development, helping me create useful web solutions.
+                    I&apos;ve done well in my studies, scoring{" "}
+                    <span className="text-blue-400 font-semibold">94.33%</span>{" "}
+                    in{" "}
+                    <span className="text-purple-400 font-semibold">
+                      10th ICSE
+                    </span>{" "}
+                    (with{" "}
+                    <span className="text-blue-400 font-semibold">100</span> in
+                    Math),{" "}
+                    <span className="text-blue-400 font-semibold">94.8%</span>{" "}
+                    in{" "}
+                    <span className="text-purple-400 font-semibold">
+                      12th CBSE
+                    </span>
+                    , and ranking{" "}
+                    <span className="text-blue-400 font-semibold">22910</span>{" "}
+                    in{" "}
+                    <span className="text-purple-400 font-semibold">
+                      JEE Mains
+                    </span>{" "}
+                    with a{" "}
+                    <span className="text-blue-400 font-semibold">97.95</span>{" "}
+                    percentile. In my work, I&apos;ve made important
+                    contributions to different projects. At{" "}
+                    <span className="text-purple-400 font-semibold">
+                      DiligenceAI
+                    </span>
+                    , I improved{" "}
+                    <span className="text-purple-400 font-semibold">
+                      LinkedIn
+                    </span>{" "}
+                    data handling, which led to{" "}
+                    <span className="text-blue-400 font-semibold">20%</span>{" "}
+                    faster performance,{" "}
+                    <span className="text-blue-400 font-semibold">30%</span>{" "}
+                    better search results, and{" "}
+                    <span className="text-blue-400 font-semibold">15%</span>{" "}
+                    more user activity. At{" "}
+                    <span className="text-purple-400 font-semibold">
+                      Alamnack Technologies
+                    </span>
+                    , I built a reading app with AI-created book summaries and
+                    set up the backend on{" "}
+                    <span className="text-purple-400 font-semibold">
+                      AWS EC2
+                    </span>
+                    . At{" "}
+                    <span className="text-purple-400 font-semibold">
+                      Techjet.ai
+                    </span>
+                    , I created APIs for the{" "}
+                    <span className="text-purple-400 font-semibold">
+                      Digi Seva
+                    </span>{" "}
+                    project using{" "}
+                    <span className="text-purple-400 font-semibold">
+                      MongoDB
+                    </span>
+                    ,{" "}
+                    <span className="text-purple-400 font-semibold">
+                      Express.js
+                    </span>
+                    , and{" "}
+                    <span className="text-purple-400 font-semibold">
+                      Node.js
+                    </span>
+                    . These experiences have improved my skills in both frontend
+                    and backend development, helping me create useful web
+                    solutions.
                   </p>
                 </CardContent>
               </Card>
