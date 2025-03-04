@@ -86,7 +86,7 @@ const letters = "Projects".split("");
 
 export function Projects() {
   return (
-    <section id="projects" className="py-24 px-6">
+    <section id="projects" className="py-16 px-6 -mt-16">
       <div className="max-w-7xl mx-auto">
         <div className="relative inline-block w-full text-center mb-16">
           <motion.h2
@@ -94,7 +94,7 @@ export function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-7xl text-white font-bold"
+            className="text-4xl md:text-7xl text-center font-bold text-white"
           >
             My{" "}
             <span className="relative">

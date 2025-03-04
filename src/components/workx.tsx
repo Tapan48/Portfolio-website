@@ -75,7 +75,7 @@ export function WorkX() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-5xl md:text-7xl text-center font-bold mb-16 text-white"
+          className="text-4xl md:text-7xl text-center font-bold mb-16 text-white"
         >
           About Me and{" "}
           <span className="relative">

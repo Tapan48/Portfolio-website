@@ -65,7 +65,7 @@ export function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-10xl md:text-6xl text-center text-white font-bold mb-16"
+          className="text-4xl md:text-7xl text-center text-white font-bold mb-16"
         >
           These are the skills I have
           <div className="h-4" />

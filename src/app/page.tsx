@@ -15,7 +15,7 @@ export default function Home() {
     >
       <Navbar />
       <Hero />
-      <div className="-mt-40">
+      <div className="-mt-41">
         <Projects />
       </div>
       
