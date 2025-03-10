@@ -23,15 +23,15 @@ export function MessageMe() {
 
     try {
       await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID!,
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
-          to_name: "Tapan",
+          to_name: "Tapan", 
         },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+        process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY
       );
 
       setFormData({ name: "", email: "", message: "" });
