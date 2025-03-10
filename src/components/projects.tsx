@@ -30,7 +30,7 @@ const projects: Project[] = [
       "Built a user-friendly e-commerce platform using React.js and Redux, featuring real-time updates and a streamlined cart system.",
     technologies: [
       "React.js",
-      "Redux", 
+      "Redux",
       "MongoDB",
       // "TypeScript",
       // "PostgreSQL",
@@ -54,23 +54,19 @@ const projects: Project[] = [
 
   /// add pern stack project
 
-  
   //// portoflio project
 
   {
     title: "Portfolio-Website",
-    description: "Built a personal portfolio website using Next.js and Tailwind CSS, showcasing projects and professional experience.",
+    description:
+      "Built a personal portfolio website using Next.js and Tailwind CSS, showcasing projects and professional experience.",
     technologies: ["Next.js", "Tailwind CSS"],
     githubUrl: "https://github.com/yourusername/portfolio",
     liveUrl: "https://portfolio-demo.com",
     imageUrl: "/portfolio.webp",
   },
 
-
-
-
-
-  ///////////////////////////////////// need to do below 
+  ///////////////////////////////////// need to do below
 
   // {
   //   title: "AI Task Manager",
@@ -109,7 +105,7 @@ const letters = "Projects".split("");
 
 export function Projects() {
   return (
-    <section id="projects" className="py-16 px-6 -mt-16">
+    <section id="projects" className="py-16 px-6 -mt-32 md:mt-16">
       <div className="max-w-7xl mx-auto">
         <div className="relative inline-block w-full text-center mb-16">
           <motion.h2
@@ -140,11 +136,18 @@ export function Projects() {
             // Calculate row index
             const rowIndex = Math.floor(index / 3);
             // Get all projects in the same row
-            const rowProjects = projects.slice(rowIndex * 3, (rowIndex + 1) * 3);
+            const rowProjects = projects.slice(
+              rowIndex * 3,
+              (rowIndex + 1) * 3
+            );
             // Find the maximum description length in the row
-            const maxDescriptionLength = Math.max(...rowProjects.map(p => p.description.length));
+            const maxDescriptionLength = Math.max(
+              ...rowProjects.map((p) => p.description.length)
+            );
             // Find the maximum number of technologies in the row
-            const maxTechnologies = Math.max(...rowProjects.map(p => p.technologies.length));
+            const maxTechnologies = Math.max(
+              ...rowProjects.map((p) => p.technologies.length)
+            );
 
             return (
               <motion.div
@@ -168,17 +171,23 @@ export function Projects() {
                     <CardTitle className="text-xl mb-3">
                       {project.title}
                     </CardTitle>
-                    <CardDescription 
+                    <CardDescription
                       className="text-sm"
-                      style={{ minHeight: `${Math.ceil(maxDescriptionLength / 50) * 1.5}rem` }}
+                      style={{
+                        minHeight: `${
+                          Math.ceil(maxDescriptionLength / 50) * 1.5
+                        }rem`,
+                      }}
                     >
                       {project.description}
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="flex-1 p-6">
-                    <div 
+                    <div
                       className="flex flex-wrap gap-3"
-                      style={{ minHeight: `${Math.ceil(maxTechnologies / 3) * 2}rem` }}
+                      style={{
+                        minHeight: `${Math.ceil(maxTechnologies / 3) * 2}rem`,
+                      }}
                     >
                       {project.technologies.map((tech) => (
                         <Badge key={tech} variant="secondary">

@@ -62,9 +62,9 @@ export function Hero() {
   return (
     <div
       id="hero"
-      className="flex flex-col md:flex-row items-center justify-center w-full min-h-screen px-4 md:px-10 pt-0 md:pt-0 lg:-mt-16 gap-6 md:gap-0"
+      className="flex flex-col md:flex-row items-center justify-center w-full min-h-screen px-4 md:px-10 pt-0 md:pt-0 lg:-mt-24 gap-6 md:gap-0"
     >
-      <div className="flex flex-col items-center md:items-start justify-center space-y-8 text-center md:text-left w-full md:w-1/2 md:ml-8 lg:ml-32 -mt-64 md:-mt-32">
+      <div className="flex flex-col items-center md:items-start justify-center space-y-8 text-center md:text-left w-full md:w-1/2 md:ml-8 lg:ml-32 -mt-72 md:-mt-40">
         <div className="space-y-3">
           <h1 className="text-2xl md:text-[28px] lg:text-6xl font-bold text-white">
             Hello, I&apos;m
@@ -97,7 +97,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="w-full md:w-1/2 flex justify-center md:justify-end items-center md:items-start mt-8 md:-mt-32 md:mr-16">
+      <div className="w-full md:w-1/2 flex justify-center md:justify-end items-center md:items-start mt-8 md:-mt-40 md:mr-16">
         <div className="rounded-full border-4 p-2 bg-gray-200 w-[200px] h-[200px] md:w-[400px] md:h-[400px]">
           <Image
             src="/webdev.png"
