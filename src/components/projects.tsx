@@ -52,19 +52,17 @@ const projects: Project[] = [
     imageUrl: "/communitycove.webp",
   },
 
-  /// add pern stack project
-
-  //// portoflio project
-
   {
     title: "Portfolio-Website",
     description:
       "Built a personal portfolio website using Next.js and Tailwind CSS, showcasing projects and professional experience.",
     technologies: ["Next.js", "Tailwind CSS"],
-    githubUrl: "https://github.com/yourusername/portfolio",
+    githubUrl: "https://github.com/Tapan48/Portfolio-website",
     liveUrl: "https://portfolio-demo.com",
     imageUrl: "/portfolio.webp",
   },
+
+  /// add pern stack project
 
   ///////////////////////////////////// need to do below
 
@@ -83,6 +81,7 @@ const projects: Project[] = [
   //   liveUrl: "https://ai-tasks-demo.com",
   //   imageUrl: "brain-circuit.svg",
   // },
+
   // {
   //   title: "Real-time Chat Application",
   //   description:
@@ -105,7 +104,7 @@ const letters = "Projects".split("");
 
 export function Projects() {
   return (
-    <section id="projects" className="py-16 px-6 -mt-32 md:mt-16">
+    <section id="projects" className="py-16 px-6 mt-20 md:mt-16">
       <div className="max-w-7xl mx-auto">
         <div className="relative inline-block w-full text-center mb-16">
           <motion.h2

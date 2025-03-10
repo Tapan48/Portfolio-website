@@ -58,7 +58,7 @@ export function MessageMe() {
   return (
     <section
       id="contact"
-      className="py-8 md:py-16 px-4 w-full flex flex-col items-center relative"
+      className="py-8 md:py-12 px-4 w-full flex flex-col items-center relative"
     >
       <div className="fixed inset-0 flex items-start justify-center z-50 pointer-events-none">
         <AnimatePresence>
@@ -94,7 +94,7 @@ export function MessageMe() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="text-2xl md:text-4xl lg:text-7xl text-center font-bold mb-8 md:mb-16"
+        className="text-2xl md:text-4xl lg:text-6xl text-center font-bold mb-6 md:mb-12"
       >
         <span className="relative">
           <motion.span
@@ -112,7 +112,7 @@ export function MessageMe() {
       </motion.h2>
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-md md:max-w-2xl space-y-6 md:space-y-12"
+        className="w-full max-w-md md:max-w-xl space-y-5 md:space-y-8"
       >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -159,7 +159,7 @@ export function MessageMe() {
               value={formData.message}
               onChange={handleChange}
               placeholder="Write your message"
-              className="min-h-[120px] md:min-h-[200px] bg-white text-black placeholder:text-gray-500 border-gray-700 focus-visible:ring-purple-400 text-sm md:text-base lg:text-xl p-3 md:p-6"
+              className="min-h-[100px] md:min-h-[160px] bg-white text-black placeholder:text-gray-500 border-gray-700 focus-visible:ring-purple-400 text-sm md:text-base lg:text-xl p-3 md:p-5"
               required
             />
           </div>

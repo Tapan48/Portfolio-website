@@ -62,9 +62,9 @@ export function Hero() {
   return (
     <div
       id="hero"
-      className="flex flex-col md:flex-row items-center justify-center w-full min-h-screen px-4 md:px-10 pt-0 md:pt-0 lg:-mt-24 gap-6 md:gap-0"
+      className="flex flex-col md:flex-row items-center justify-center w-full min-h-screen px-4 md:px-10 pt-24 md:pt-0 lg:-mt-24 gap-6 md:gap-0"
     >
-      <div className="flex flex-col items-center md:items-start justify-center space-y-8 text-center md:text-left w-full md:w-1/2 md:ml-8 lg:ml-32 -mt-72 md:-mt-40">
+      <div className="flex flex-col items-center md:items-start justify-center space-y-8 text-center md:text-left w-full md:w-1/2 md:ml-8 lg:ml-32 -mt-32 md:-mt-40">
         <div className="space-y-3">
           <h1 className="text-2xl md:text-[28px] lg:text-6xl font-bold text-white">
             Hello, I&apos;m
