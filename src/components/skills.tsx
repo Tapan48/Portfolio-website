@@ -21,18 +21,22 @@ const skillCategories: SkillCategory[] = [
       { name: "TypeScript", icon: "typescript.svg" },
       { name: "Python", icon: "python.svg" },
       { name: "C++", icon: "cpp.svg" },
-      { name: "Java", icon: "java.svg" },
+
     ],
   },
   {
     title: "Web Development",
     skills: [
-      { name: "HTML", icon: "html.svg" },
-      { name: "CSS", icon: "css.svg" },
+
       { name: "React.js", icon: "react.svg" },
+      { name: "Next.js", icon: "nextjs.svg" },
+      { name: "HTML", icon: "html.svg" },
+
+      { name: "Redux", icon: "redux.svg" },
+   
       { name: "Node.js", icon: "nodejs.svg" },
       { name: "Express.js", icon: "express.svg" },
-      { name: "Next.js", icon: "nextjs.svg" },
+     
       { name: "Tailwind CSS", icon: "tailwind.svg" },
       { name: "Socket.IO", icon: "socketio.svg" },
     ],
