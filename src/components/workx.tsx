@@ -68,7 +68,10 @@ export function WorkX() {
   ];
 
   const formatDescription = (desc: string) => {
-    return desc.replace(/\*\*(.*?)\*\*/g, '<span class="text-purple-400 font-semibold">$1</span>');
+    return desc.replace(
+      /\*\*(.*?)\*\*/g,
+      '<span class="text-purple-400 font-semibold">$1</span>'
+    );
   };
 
   return (
@@ -79,7 +82,7 @@ export function WorkX() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-7xl text-center font-bold mb-16 text-white"
+          className="text-3xl md:text-5xl lg:text-7xl text-center font-bold mb-16 text-white"
         >
           About Me and{" "}
           <span className="relative">
@@ -160,10 +163,12 @@ export function WorkX() {
                   <CardContent>
                     <div className="mb-4">
                       {exp.description.map((desc, i) => (
-                        <div 
-                          key={i} 
-                          dangerouslySetInnerHTML={{ __html: formatDescription(desc) }} 
-                          className="mb-2" 
+                        <div
+                          key={i}
+                          dangerouslySetInnerHTML={{
+                            __html: formatDescription(desc),
+                          }}
+                          className="mb-2"
                         />
                       ))}
                     </div>

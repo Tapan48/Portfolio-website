@@ -21,22 +21,20 @@ const skillCategories: SkillCategory[] = [
       { name: "TypeScript", icon: "typescript.svg" },
       { name: "Python", icon: "python.svg" },
       { name: "C++", icon: "cpp.svg" },
-
     ],
   },
   {
     title: "Web Development",
     skills: [
-
       { name: "React.js", icon: "react.svg" },
       { name: "Next.js", icon: "nextjs.svg" },
       { name: "HTML", icon: "html.svg" },
 
       { name: "Redux", icon: "redux.svg" },
-   
+
       { name: "Node.js", icon: "nodejs.svg" },
       { name: "Express.js", icon: "express.svg" },
-     
+
       { name: "Tailwind CSS", icon: "tailwind.svg" },
       { name: "Socket.IO", icon: "socketio.svg" },
     ],
@@ -69,7 +67,7 @@ export function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-7xl text-center text-white font-bold mb-16"
+          className="text-3xl md:text-5xl lg:text-7xl text-center text-white font-bold mb-16"
         >
           These are the skills I have
           <div className="h-4" />

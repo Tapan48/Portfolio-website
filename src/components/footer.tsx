@@ -59,7 +59,7 @@ export function Footer() {
               ))}
             </div>
 
-            <div className="flex flex-col md:flex-row items-center md:items-center gap-2 md:gap-3 text-base">
+            <div className="flex items-center justify-center md:justify-start gap-2 md:gap-3 text-base">
               <span className="font-semibold text-white/80">Email:</span>
               <Link
                 href="mailto:tapangarasangi@gmail.com"
