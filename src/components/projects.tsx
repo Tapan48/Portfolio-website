@@ -25,37 +25,53 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "E-Commerce Platform",
+    title: "SwiftCart",
     description:
-      "A full-stack e-commerce platform built with Next.js 14, featuring user authentication, shopping cart, payment processing with Stripe, and order management.",
+      "Built a user-friendly e-commerce platform using React.js and Redux, featuring real-time updates and a streamlined cart system.",
     technologies: [
-      "Next.js",
-      "TypeScript",
-      "Prisma",
-      "PostgreSQL",
-      "Stripe",
-      "Tailwind",
-    ],
-    githubUrl: "https://github.com/yourusername/ecommerce",
-    liveUrl: "https://ecommerce-demo.com",
-    imageUrl: "shopping-bag.svg",
-  },
-  {
-    title: "Real-time Chat Application",
-    description:
-      "A modern chat application with real-time messaging, file sharing, and user presence. Features end-to-end encryption and message persistence.",
-    technologies: [
-      "React",
-      "Node.js",
-      "Socket.IO",
+      "React.js",
+      "Redux", 
       "MongoDB",
-      "Redis",
-      "WebRTC",
+      // "TypeScript",
+      // "PostgreSQL",
+      // "Stripe",
+      // "Tailwind",
     ],
-    githubUrl: "https://github.com/yourusername/chat-app",
-    liveUrl: "https://chat-app-demo.com",
-    imageUrl: "messages-square.svg",
+    githubUrl: "https://github.com/Tapan48/SwiftCart",
+    liveUrl: "https://ecommerce-app-olive-chi-40.vercel.app/",
+    imageUrl: "/swiftcart.webp",
   },
+
+  {
+    title: "CommunityCove",
+    description:
+      "Built a social media platform with real-time voting and community features. Users can create/view posts, join communities, and participate in voting.",
+    technologies: ["React-Query", "Supabase", "PostgreSQL", "Tailwind CSS"],
+    githubUrl: "https://github.com/Tapan48/CommunityCove",
+    liveUrl: "https://social-media-app2-five.vercel.app/",
+    imageUrl: "/communitycove.webp",
+  },
+
+  /// add pern stack project
+
+  
+  //// portoflio project
+
+  {
+    title: "Portfolio-Website",
+    description: "Built a personal portfolio website using Next.js and Tailwind CSS, showcasing projects and professional experience.",
+    technologies: ["Next.js", "Tailwind CSS"],
+    githubUrl: "https://github.com/yourusername/portfolio",
+    liveUrl: "https://portfolio-demo.com",
+    imageUrl: "/portfolio.webp",
+  },
+
+
+
+
+
+  ///////////////////////////////////// need to do below 
+
   // {
   //   title: "AI Task Manager",
   //   description:
@@ -71,15 +87,22 @@ const projects: Project[] = [
   //   liveUrl: "https://ai-tasks-demo.com",
   //   imageUrl: "brain-circuit.svg",
   // },
-  {
-    title: "Social Media Dashboard",
-    description:
-      "A comprehensive dashboard for social media analytics, featuring real-time data visualization, sentiment analysis, and automated reporting.",
-    technologies: ["React", "D3.js", "Node.js", "MongoDB", "Express"],
-    githubUrl: "https://github.com/yourusername/social-dashboard",
-    liveUrl: "https://social-dashboard-demo.com",
-    imageUrl: "layout-dashboard.svg",
-  },
+  // {
+  //   title: "Real-time Chat Application",
+  //   description:
+  //     "A modern chat application with real-time messaging, file sharing, and user presence. Features end-to-end encryption and message persistence.",
+  //   technologies: [
+  //     "React",
+  //     "Node.js",
+  //     "Socket.IO",
+  //     "MongoDB",
+  //     "Redis",
+  //     "WebRTC",
+  //   ],
+  //   githubUrl: "https://github.com/yourusername/chat-app",
+  //   liveUrl: "https://chat-app-demo.com",
+  //   imageUrl: "messages-square.svg",
+  // },
 ];
 
 const letters = "Projects".split("");
@@ -113,66 +136,83 @@ export function Projects() {
           </motion.h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 w-full">
-          {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="p-2"
-            >
-              <Card className="group hover:shadow-lg transition-all duration-300 overflow-hidden border-4 border-white h-[500px] flex flex-col">
-                <CardHeader className="flex-shrink-0 p-6">
-                  <div className="overflow-hidden rounded-lg mb-6 h-48 relative">
-                    <Image
-                      src={project.imageUrl}
-                      alt={project.title}
-                      fill
-                      className="object-cover transform group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <CardTitle className="text-xl mb-3">
-                    {project.title}
-                  </CardTitle>
-                  <CardDescription className="text-sm line-clamp-2">
-                    {project.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="flex-1 p-6">
-                  <div className="flex flex-wrap gap-3">
-                    {project.technologies.map((tech) => (
-                      <Badge key={tech} variant="secondary">
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-                <CardFooter className="flex gap-4 mt-auto p-6">
-                  {project.githubUrl && (
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={() => window.open(project.githubUrl, "_blank")}
+          {projects.map((project, index) => {
+            // Calculate row index
+            const rowIndex = Math.floor(index / 3);
+            // Get all projects in the same row
+            const rowProjects = projects.slice(rowIndex * 3, (rowIndex + 1) * 3);
+            // Find the maximum description length in the row
+            const maxDescriptionLength = Math.max(...rowProjects.map(p => p.description.length));
+            // Find the maximum number of technologies in the row
+            const maxTechnologies = Math.max(...rowProjects.map(p => p.technologies.length));
+
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="p-2"
+              >
+                <Card className="group hover:shadow-lg transition-all duration-300 overflow-hidden border-4 border-white h-full flex flex-col">
+                  <CardHeader className="flex-shrink-0 p-6">
+                    <div className="overflow-hidden rounded-lg mb-6 h-48 relative">
+                      <Image
+                        src={project.imageUrl}
+                        alt={project.title}
+                        fill
+                        className="object-cover transform group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <CardTitle className="text-xl mb-3">
+                      {project.title}
+                    </CardTitle>
+                    <CardDescription 
+                      className="text-sm"
+                      style={{ minHeight: `${Math.ceil(maxDescriptionLength / 50) * 1.5}rem` }}
                     >
-                      <Github className="mr-2 h-4 w-4" />
-                      Code
-                    </Button>
-                  )}
-                  {project.liveUrl && (
-                    <Button
-                      variant="default"
-                      size="sm"
-                      onClick={() => window.open(project.liveUrl, "_blank")}
+                      {project.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="flex-1 p-6">
+                    <div 
+                      className="flex flex-wrap gap-3"
+                      style={{ minHeight: `${Math.ceil(maxTechnologies / 3) * 2}rem` }}
                     >
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Live Demo
-                    </Button>
-                  )}
-                </CardFooter>
-              </Card>
-            </motion.div>
-          ))}
+                      {project.technologies.map((tech) => (
+                        <Badge key={tech} variant="secondary">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                  <CardFooter className="flex gap-4 mt-auto p-6">
+                    {project.githubUrl && (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() => window.open(project.githubUrl, "_blank")}
+                      >
+                        <Github className="mr-2 h-4 w-4" />
+                        Code
+                      </Button>
+                    )}
+                    {project.liveUrl && (
+                      <Button
+                        variant="default"
+                        size="sm"
+                        onClick={() => window.open(project.liveUrl, "_blank")}
+                      >
+                        <ExternalLink className="mr-2 h-4 w-4" />
+                        Live Demo
+                      </Button>
+                    )}
+                  </CardFooter>
+                </Card>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

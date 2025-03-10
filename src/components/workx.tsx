@@ -24,11 +24,11 @@ export function WorkX() {
       company: "Alamnack Technologies",
       period: "May 2023 - July 2023",
       description: [
-        "• Developed a user-friendly platform for readers to access book content",
+        "• Developed a **user-friendly platform** for readers to access book content",
 
-        "• Created the frontend of the app",
+        "• Created the **frontend** of the app",
 
-        "• Created and configured a virtual server on AWS EC2 to host a books API for a mobile application.",
+        "• Created and configured a virtual server on **AWS EC2** to host a books API for a mobile application.",
       ],
 
       skills: ["React", "TypeScript", "Next.js", "TailwindCSS"],
@@ -39,9 +39,9 @@ export function WorkX() {
       company: "Techjet.ai",
       period: "January 2024 - May 2024",
       description: [
-        "• Designed and implemented 5+ RESTful APIs for the Digi Seva project, integrating with a Mon- goDB database handling 500+ daily transactions with 99% uptime.",
+        "• Designed and implemented **5+ RESTful APIs** for the Digi Seva project, integrating with **MongoDB** database handling daily transactions.",
 
-        "• Utilized Express.js to set up routing and middleware, reducing API response time by 25% and achieving 85% test coverage for secure and scalable data transactions.",
+        "• Utilized **Express.js** to implement RESTful routing and middleware optimization, enhancing API latency and achieving test coverage for secure and scalable data transactions.",
       ],
       skills: ["Express", "Node.js", "MongoDB"],
     },
@@ -50,11 +50,11 @@ export function WorkX() {
       company: "DiligenceAI",
       period: "November 2024 - January 2025",
       description: [
-        "• Designed PostgreSQL database model with Drizzle ORM handling 1,000+ LinkedIn connections at 99% uptime. Built 3 key API endpoints and 2 webhooks, cutting data latency by 20%.",
+        "• Designed **PostgreSQL** database model with **Drizzle ORM** for efficient LinkedIn connection management.",
 
-        "• Integrated LinkedIn functionality via Unipile API with secure account linking interface using Shadcn UI, boosting user engagement by 15%.",
+        "• Built **3 key API endpoints** and **2 webhooks**, implementing query optimization and connection pooling for improved data synchronization.",
 
-        "• Built automated connection expiration system with timely user notifications and advanced search features using Unipile filters, improving search accuracy by 30%.",
+        "• Implemented **LinkedIn profile synchronization** using **Unipile API** with secure user authentication.",
       ],
       skills: [
         "NextJS",
@@ -62,10 +62,14 @@ export function WorkX() {
         "Drizzle ORM",
         "Tailwind CSS",
         "Unipile API",
-        "Shadcn UI",
+        "Shadcn components",
       ],
     },
   ];
+
+  const formatDescription = (desc: string) => {
+    return desc.replace(/\*\*(.*?)\*\*/g, '<span class="text-purple-400 font-semibold">$1</span>');
+  };
 
   return (
     <section id="workx" className="min-h-screen flex items-start pt-32 px-4">
@@ -154,7 +158,15 @@ export function WorkX() {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p className="mb-4">{exp.description}</p>
+                    <div className="mb-4">
+                      {exp.description.map((desc, i) => (
+                        <div 
+                          key={i} 
+                          dangerouslySetInnerHTML={{ __html: formatDescription(desc) }} 
+                          className="mb-2" 
+                        />
+                      ))}
+                    </div>
                     <div className="flex gap-2 flex-wrap">
                       {exp.skills.map((skill) => (
                         <Badge key={skill} variant="secondary">
@@ -207,48 +219,46 @@ export function WorkX() {
                     <span className="text-purple-400 font-semibold">
                       DiligenceAI
                     </span>
-                    , I improved{" "}
+                    , I designed{" "}
+                    <span className="text-purple-400 font-semibold">
+                      PostgreSQL
+                    </span>{" "}
+                    database models and implemented{" "}
                     <span className="text-purple-400 font-semibold">
                       LinkedIn
                     </span>{" "}
-                    data handling, which led to{" "}
-                    <span className="text-blue-400 font-semibold">20%</span>{" "}
-                    faster performance,{" "}
-                    <span className="text-blue-400 font-semibold">30%</span>{" "}
-                    better search results, and{" "}
-                    <span className="text-blue-400 font-semibold">15%</span>{" "}
-                    more user activity. At{" "}
+                    profile synchronization using{" "}
+                    <span className="text-purple-400 font-semibold">
+                      Unipile API
+                    </span>
+                    , improving data management efficiency. At{" "}
                     <span className="text-purple-400 font-semibold">
                       Alamnack Technologies
                     </span>
-                    , I built a reading app with AI-created book summaries and
-                    set up the backend on{" "}
+                    , I developed a reading platform with book summaries and
+                    configured{" "}
                     <span className="text-purple-400 font-semibold">
                       AWS EC2
-                    </span>
-                    . At{" "}
+                    </span>{" "}
+                    for backend hosting. At{" "}
                     <span className="text-purple-400 font-semibold">
                       Techjet.ai
                     </span>
-                    , I created APIs for the{" "}
+                    , I built RESTful APIs for the{" "}
                     <span className="text-purple-400 font-semibold">
                       Digi Seva
                     </span>{" "}
                     project using{" "}
                     <span className="text-purple-400 font-semibold">
                       MongoDB
-                    </span>
-                    ,{" "}
+                    </span>{" "}
+                    and{" "}
                     <span className="text-purple-400 font-semibold">
                       Express.js
                     </span>
-                    , and{" "}
-                    <span className="text-purple-400 font-semibold">
-                      Node.js
-                    </span>
-                    . These experiences have improved my skills in both frontend
-                    and backend development, helping me create useful web
-                    solutions.
+                    . These experiences have strengthened my full-stack
+                    development skills, particularly in database design, API
+                    integration, and cloud services.
                   </p>
                 </CardContent>
               </Card>
