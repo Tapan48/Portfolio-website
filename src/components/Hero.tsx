@@ -62,26 +62,26 @@ export function Hero() {
   return (
     <div
       id="hero"
-      className="flex flex-row items-start justify-evenly w-full h-auto sm:h-[75vh] px-10 pt-32"
+      className="flex flex-col md:flex-row items-center justify-center w-full min-h-screen px-4 md:px-10 pt-0 md:pt-0 lg:-mt-16 gap-6 md:gap-0"
     >
-      <div className="flex flex-col items-start justify-evenly space-y-8 text-left w-1/2 mt-18 ml-32">
-        <div className="space-y-4">
-          <h1 className="text-[28px] font-bold text-white sm:text-6xl">
+      <div className="flex flex-col items-center md:items-start justify-center space-y-8 text-center md:text-left w-full md:w-1/2 md:ml-8 lg:ml-32 -mt-64 md:-mt-32">
+        <div className="space-y-3">
+          <h1 className="text-2xl md:text-[28px] lg:text-6xl font-bold text-white">
             Hello, I&apos;m
           </h1>
-          <div className="flex items-center ">
-            <div className="text-[36px] sm:text-7xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text whitespace-nowrap">
+          <div className="flex items-center justify-center md:justify-start">
+            <div className="text-3xl md:text-[36px] lg:text-7xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text whitespace-nowrap">
               {text}
             </div>
-            <div className="w-[6px] h-[65px] sm:h-[95px] bg-purple-500 ml-1 animate-blink" />
+            <div className="w-[4px] md:w-[6px] h-[45px] md:h-[65px] lg:h-[95px] bg-purple-500 ml-1 animate-blink" />
           </div>
         </div>
 
-        <div className="flex flex-colsm:flex-row gap-10 pt-6">
+        <div className="flex flex-col sm:flex-row gap-4 md:gap-10 pt-4">
           <Button
             variant="default"
             size="lg"
-            className="px-8 py-7 text-[20px] font-bold border-4 border-blue-500 rounded-full"
+            className="px-6 md:px-8 py-6 md:py-7 text-lg md:text-[20px] font-bold border-4 border-blue-500 rounded-full"
             onClick={handleViewResume}
           >
             Resume
@@ -89,7 +89,7 @@ export function Hero() {
           <Button
             variant="outline"
             size="lg"
-            className="px-5 py-7 text-[20px] rounded-full bg"
+            className="px-4 md:px-5 py-6 md:py-7 text-lg md:text-[20px] rounded-full"
             onClick={handleContactMe}
           >
             Contact Me
@@ -97,14 +97,14 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="w-1/2 flex justify-end items-start h-full -mt-16 mr-16">
-        <div className="rounded-full border-4 p-2 bg-gray-200">
+      <div className="w-full md:w-1/2 flex justify-center md:justify-end items-center md:items-start mt-8 md:-mt-32 md:mr-16">
+        <div className="rounded-full border-4 p-2 bg-gray-200 w-[200px] h-[200px] md:w-[400px] md:h-[400px]">
           <Image
             src="/webdev.png"
             alt="Web Development Illustration"
             width={400}
             height={400}
-            className="object-cover rounded-full shadow-lg"
+            className="object-cover rounded-full shadow-lg w-full h-full"
             priority
           />
         </div>

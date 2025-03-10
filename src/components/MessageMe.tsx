@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import emailjs from "@emailjs/browser";
-import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { Check, Loader2 } from "lucide-react";
+import { useState } from "react";
 
 export function MessageMe() {
   const [formData, setFormData] = useState({
@@ -58,7 +58,7 @@ export function MessageMe() {
   return (
     <section
       id="contact"
-      className="py-16 px-4 w-full flex flex-col items-center relative"
+      className="py-8 md:py-16 px-4 w-full flex flex-col items-center relative"
     >
       <div className="fixed inset-0 flex items-start justify-center z-50 pointer-events-none">
         <AnimatePresence>
@@ -70,7 +70,9 @@ export function MessageMe() {
               className="bg-green-100 border border-green-400 text-green-700 px-6 py-4 rounded-lg shadow-lg flex items-center gap-3 pointer-events-auto"
             >
               <Check className="h-6 w-6" />
-              <p className="text-lg">Message sent successfully! Thanks for reaching out.</p>
+              <p className="text-lg">
+                Message sent successfully! Thanks for reaching out.
+              </p>
             </motion.div>
           )}
           {isLoading && (
@@ -92,7 +94,7 @@ export function MessageMe() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="text-4xl md:text-7xl text-center font-bold mb-16"
+        className="text-2xl md:text-4xl lg:text-7xl text-center font-bold mb-8 md:mb-16"
       >
         <span className="relative">
           <motion.span
@@ -108,16 +110,19 @@ export function MessageMe() {
           </span>
         </span>
       </motion.h2>
-      <form onSubmit={handleSubmit} className="w-full max-w-2xl space-y-12">
+      <form
+        onSubmit={handleSubmit}
+        className="w-full max-w-md md:max-w-2xl space-y-6 md:space-y-12"
+      >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
-          className="flex flex-col space-y-8"
+          className="flex flex-col space-y-4 md:space-y-8"
         >
-          <div className="flex flex-col space-y-2">
-            <span className="text-3xl text-white font-bold">
+          <div className="flex flex-col space-y-1 md:space-y-2">
+            <span className="text-lg md:text-2xl lg:text-3xl text-white font-bold">
               Hello Tapan, My name is...
             </span>
             <Input
@@ -125,13 +130,13 @@ export function MessageMe() {
               value={formData.name}
               onChange={handleChange}
               placeholder="Enter your name"
-              className="bg-white text-black placeholder:text-gray-500 border-gray-700 focus-visible:ring-purple-400 text-xl"
+              className="bg-white text-black placeholder:text-gray-500 border-gray-700 focus-visible:ring-purple-400 text-sm md:text-base lg:text-xl p-3 md:p-6"
               required
             />
           </div>
 
-          <div className="flex flex-col space-y-2">
-            <span className="text-3xl text-white font-bold">
+          <div className="flex flex-col space-y-1 md:space-y-2">
+            <span className="text-lg md:text-2xl lg:text-3xl text-white font-bold">
               and my Email is...
             </span>
             <Input
@@ -140,13 +145,13 @@ export function MessageMe() {
               value={formData.email}
               onChange={handleChange}
               placeholder="Enter your email"
-              className="bg-white text-black placeholder:text-gray-500 border-gray-700 focus-visible:ring-purple-400 text-xl"
+              className="bg-white text-black placeholder:text-gray-500 border-gray-700 focus-visible:ring-purple-400 text-sm md:text-base lg:text-xl p-3 md:p-6"
               required
             />
           </div>
 
-          <div className="flex flex-col space-y-2">
-            <span className="text-3xl text-white font-bold">
+          <div className="flex flex-col space-y-1 md:space-y-2">
+            <span className="text-lg md:text-2xl lg:text-3xl text-white font-bold">
               I want to say that...
             </span>
             <Textarea
@@ -154,17 +159,17 @@ export function MessageMe() {
               value={formData.message}
               onChange={handleChange}
               placeholder="Write your message"
-              className="min-h-[200px] bg-white text-black placeholder:text-gray-500 border-gray-700 focus-visible:ring-purple-400 text-xl"
+              className="min-h-[120px] md:min-h-[200px] bg-white text-black placeholder:text-gray-500 border-gray-700 focus-visible:ring-purple-400 text-sm md:text-base lg:text-xl p-3 md:p-6"
               required
             />
           </div>
 
-          <div className="w-full pt-4">
+          <div className="w-full pt-2 md:pt-4">
             <Button
               type="submit"
               size="lg"
               disabled={isLoading}
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white text-xl px-12 py-6 disabled:opacity-50"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white text-base md:text-lg lg:text-xl px-4 md:px-8 py-2 md:py-4 disabled:opacity-50"
             >
               Send
             </Button>

@@ -1,12 +1,7 @@
 "use client";
 
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -71,6 +66,7 @@ function ListItem({ className, title, href, children }: ListItemProps) {
 export function Navbar() {
   const [isVisible, setIsVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -95,6 +91,14 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollPos]);
 
+  const handleNavClick = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false); // Close the sheet when nav item is clicked
+    }
+  };
+
   return (
     <div
       className={`fixed top-0 h-16 w-full z-50 flex justify-between items-center px-4 py-2 bg-[oklch(0.13_0.028_261.692)]/80 backdrop-blur-sm border-b transition-transform duration-300 ${
@@ -110,6 +114,7 @@ export function Navbar() {
       </div>
 
       <div className="flex items-center justify-end gap-4">
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center justify-evenly space-x-20 mr-4">
           {components.map((component) => (
             <Link
@@ -118,10 +123,7 @@ export function Navbar() {
               className="text-lg font-bold transition-all duration-300 hover:text-white/70 text-white hover:scale-110 hover:bg-gradient-to-r hover:from-purple-400 hover:to-pink-600 hover:bg-clip-text hover:text-transparent"
               onClick={(e) => {
                 e.preventDefault();
-                const element = document.querySelector(component.href);
-                if (element) {
-                  element.scrollIntoView({ behavior: "smooth" });
-                }
+                handleNavClick(component.href);
               }}
             >
               {component.title}
@@ -129,28 +131,32 @@ export function Navbar() {
           ))}
         </nav>
 
-        <NavigationMenu className="md:hidden">
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-white text-lg">
-                Menu
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[200px] gap-3 p-4">
-                  {components.map((component) => (
-                    <ListItem
-                      key={component.title}
-                      title={component.title}
-                      href={component.href}
-                    >
-                      {component.description}
-                    </ListItem>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
+        {/* Mobile Navigation */}
+        <Sheet open={isOpen} onOpenChange={setIsOpen}>
+          <SheetTrigger className="md:hidden">
+            <Menu className="h-6 w-6 text-white" />
+          </SheetTrigger>
+          <SheetContent
+            side="right"
+            className="w-[300px] sm:w-[400px] bg-[oklch(0.13_0.028_261.692)] border-none"
+          >
+            <nav className="flex flex-col gap-6 mt-10">
+              {components.map((component) => (
+                <Link
+                  key={component.title}
+                  href={component.href}
+                  className="text-lg font-bold transition-all duration-300 text-white hover:text-white/70"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick(component.href);
+                  }}
+                >
+                  {component.title}
+                </Link>
+              ))}
+            </nav>
+          </SheetContent>
+        </Sheet>
       </div>
     </div>
   );
