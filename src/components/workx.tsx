@@ -85,7 +85,7 @@ export function WorkX() {
           className="text-3xl md:text-5xl lg:text-7xl text-center font-bold mb-16 text-white"
         >
           About Me and{" "}
-          <span className="relative">
+          <span className="relative inline-block">
             <motion.span
               className="absolute inset-0 rounded-lg bg-gradient-to-r from-indigo-300 to-purple-300 dark:from-indigo-500 dark:to-purple-500"
               initial={{ scaleX: 0 }}
@@ -94,7 +94,7 @@ export function WorkX() {
               viewport={{ once: true }}
               style={{ originX: 0 }}
             />
-            <span className="relative z-10 text-black dark:text-black">
+            <span className="relative z-10 text-black dark:text-black whitespace-nowrap">
               My Work
             </span>
           </span>
