@@ -4,21 +4,35 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import emailjs from "@emailjs/browser";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { AnimatePresence, motion } from "framer-motion";
 import { Check, Loader2 } from "lucide-react";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+
+const formSchema = z.object({
+  name: z.string().min(1, "Name is required"),
+  email: z.string().email("Invalid email address"),
+  message: z.string().min(1, "Message is required"),
+});
+
+type FormData = z.infer<typeof formSchema>;
 
 export function MessageMe() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
   const [isLoading, setIsLoading] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const form = useForm<FormData>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+  });
+
+  const handleSubmit = async (data: FormData) => {
     setIsLoading(true);
 
     try {
@@ -26,15 +40,15 @@ export function MessageMe() {
         process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID!,
         process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID!,
         {
-          from_name: formData.name,
-          from_email: formData.email,
-          message: formData.message,
-          to_name: "Tapan", 
+          from_name: data.name,
+          from_email: data.email,
+          message: data.message,
+          to_name: "Tapan",
         },
         process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY
       );
 
-      setFormData({ name: "", email: "", message: "" });
+      form.reset();
       setShowSuccess(true);
       setTimeout(() => setShowSuccess(false), 3000);
     } catch (error) {
@@ -43,16 +57,6 @@ export function MessageMe() {
     } finally {
       setIsLoading(false);
     }
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
   };
 
   return (
@@ -111,7 +115,7 @@ export function MessageMe() {
         </span>
       </motion.h2>
       <form
-        onSubmit={handleSubmit}
+        onSubmit={form.handleSubmit(handleSubmit)}
         className="w-full max-w-md md:max-w-xl space-y-5 md:space-y-8"
       >
         <motion.div
@@ -126,13 +130,15 @@ export function MessageMe() {
               Hello Tapan, My name is...
             </span>
             <Input
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
+              {...form.register("name")}
               placeholder="Enter your name"
               className="bg-white text-black placeholder:text-gray-500 border-gray-700 focus-visible:ring-purple-400 text-sm md:text-base lg:text-xl p-3 md:p-6"
-              required
             />
+            {form.formState.errors.name && (
+              <span className="text-red-500">
+                {form.formState.errors.name.message}
+              </span>
+            )}
           </div>
 
           <div className="flex flex-col space-y-1 md:space-y-2">
@@ -140,14 +146,16 @@ export function MessageMe() {
               and my Email is...
             </span>
             <Input
-              name="email"
+              {...form.register("email")}
               type="email"
-              value={formData.email}
-              onChange={handleChange}
               placeholder="Enter your email"
               className="bg-white text-black placeholder:text-gray-500 border-gray-700 focus-visible:ring-purple-400 text-sm md:text-base lg:text-xl p-3 md:p-6"
-              required
             />
+            {form.formState.errors.email && (
+              <span className="text-red-500">
+                {form.formState.errors.email.message}
+              </span>
+            )}
           </div>
 
           <div className="flex flex-col space-y-1 md:space-y-2">
@@ -155,13 +163,15 @@ export function MessageMe() {
               I want to say that...
             </span>
             <Textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
+              {...form.register("message")}
               placeholder="Write your message"
               className="min-h-[100px] md:min-h-[160px] bg-white text-black placeholder:text-gray-500 border-gray-700 focus-visible:ring-purple-400 text-sm md:text-base lg:text-xl p-3 md:p-5"
-              required
             />
+            {form.formState.errors.message && (
+              <span className="text-red-500">
+                {form.formState.errors.message.message}
+              </span>
+            )}
           </div>
 
           <div className="w-full pt-2 md:pt-4">
