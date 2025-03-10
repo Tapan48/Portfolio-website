@@ -55,7 +55,7 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { name: "Postman", icon: "postman.svg" },
       { name: "Docker", icon: "docker.svg" },
-      { name: "Figma", icon: "figma.svg" },
+      { name: "Git", icon: "git.svg" },
     ],
   },
 ];
