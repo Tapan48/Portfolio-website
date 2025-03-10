@@ -15,13 +15,12 @@ export default function Home() {
     >
       <Navbar />
       <Hero />
-      <div className="-mt-41">
+      <div className="-mt-36 md:-mt-64 lg:-mt-72">
         <Projects />
       </div>
-      
+
       <Skills />
 
-     
       <WorkX />
       <MessageMe />
       <Footer />
