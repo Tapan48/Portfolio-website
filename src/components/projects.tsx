@@ -58,7 +58,7 @@ const projects: Project[] = [
       "Built a personal portfolio website using Next.js and Tailwind CSS, showcasing projects and professional experience.",
     technologies: ["Next.js", "Tailwind CSS"],
     githubUrl: "https://github.com/Tapan48/Portfolio-website",
-    liveUrl: "https://portfolio-demo.com",
+    liveUrl: "https://portfolio-tapan-nu.vercel.app/",
     imageUrl: "/portfolio.webp",
   },
 
