@@ -15,16 +15,16 @@ export async function POST(request: Request) {
     });
 
     const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: "your-email@gmail.com", // Replace with your email
-      subject: `New message from ${name}`,
+      //   from: process.env.EMAIL_USER,
+      to: "tapangarasangi@gmail.com", // Replace with your email
+      subject: `Message from **Portfolio Website**`,
       text: `
         Name: ${name}
         Email: ${email}
         Message: ${message}
       `,
       html: `
-        <h3>New Contact Form Submission</h3>
+        <h3>Message from Portfolio Website</h3>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Message:</strong> ${message}</p>
