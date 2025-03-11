@@ -7,7 +7,7 @@ import emailjs from "@emailjs/browser";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { AnimatePresence, motion } from "framer-motion";
 import { Check, Loader2 } from "lucide-react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
@@ -33,16 +33,23 @@ export function MessageMe() {
     },
   });
 
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init(process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY!);
+  }, []);
+
   const handleSubmit = async (data: FormData) => {
     setIsLoading(true);
 
     try {
-      await emailjs.sendForm(
+      await emailjs.send(
         process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID!,
         process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID!,
-        formRef.current!,
         {
-          publicKey: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY!,
+          name: data.name,
+          email: data.email,
+          message: data.message,
+          to_name: "Tapan",
         }
       );
 
