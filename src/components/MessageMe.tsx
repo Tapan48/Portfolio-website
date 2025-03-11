@@ -42,16 +42,13 @@ export function MessageMe() {
     setIsLoading(true);
 
     try {
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID!,
-        {
-          name: data.name,
-          email: data.email,
-          message: data.message,
-          to_name: "Tapan",
-        }
-      );
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) throw new Error("Failed to send email");
 
       form.reset();
       setShowSuccess(true);
