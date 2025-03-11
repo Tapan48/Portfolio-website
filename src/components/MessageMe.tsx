@@ -7,7 +7,7 @@ import emailjs from "@emailjs/browser";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { AnimatePresence, motion } from "framer-motion";
 import { Check, Loader2 } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
@@ -20,6 +20,7 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>;
 
 export function MessageMe() {
+  const formRef = useRef<HTMLFormElement>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
 
@@ -36,16 +37,13 @@ export function MessageMe() {
     setIsLoading(true);
 
     try {
-      await emailjs.send(
+      await emailjs.sendForm(
         process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID!,
         process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID!,
+        formRef.current!,
         {
-          from_name: data.name,
-          from_email: data.email,
-          message: data.message,
-          to_name: "Tapan",
-        },
-        process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY
+          publicKey: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY!,
+        }
       );
 
       form.reset();
@@ -115,6 +113,7 @@ export function MessageMe() {
         </span>
       </motion.h2>
       <form
+        ref={formRef}
         onSubmit={form.handleSubmit(handleSubmit)}
         className="w-full max-w-md md:max-w-xl space-y-5 md:space-y-8"
       >
