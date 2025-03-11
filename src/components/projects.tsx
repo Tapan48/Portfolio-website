@@ -58,7 +58,7 @@ const projects: Project[] = [
       "Built a personal portfolio website using Next.js and Tailwind CSS, showcasing projects and professional experience.",
     technologies: ["Next.js", "Tailwind CSS"],
     githubUrl: "https://github.com/Tapan48/Portfolio-website",
-    liveUrl: "https://portfolio-tapan-nu.vercel.app/",
+    liveUrl: "https://tapan-portfolio-smoky.vercel.app/",
     imageUrl: "/portfolio.webp",
   },
 
@@ -201,6 +201,7 @@ export function Projects() {
                         variant="outline"
                         size="sm"
                         onClick={() => window.open(project.githubUrl, "_blank")}
+                        className="border-2"
                       >
                         <Github className="mr-2 h-4 w-4" />
                         Code
