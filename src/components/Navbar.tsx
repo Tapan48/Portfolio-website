@@ -1,7 +1,7 @@
 "use client";
 
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -134,12 +134,23 @@ export function Navbar() {
         {/* Mobile Navigation */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger className="md:hidden">
-            <Menu className="h-6 w-6 text-white" />
+            {isOpen ? (
+              <X className="h-6 w-6 text-white" />
+            ) : (
+              <Menu className="h-6 w-6 text-white" />
+            )}
           </SheetTrigger>
           <SheetContent
             side="right"
             className="w-[300px] sm:w-[400px] bg-[oklch(0.13_0.028_261.692)] border-none"
           >
+            <div className="absolute right-4 top-4">
+              <X 
+                className="h-6 w-6 text-white cursor-pointer" 
+                onClick={() => setIsOpen(false)}
+              />
+            </div>
+            
             <nav className="flex flex-col gap-6 mt-10">
               {components.map((component) => (
                 <Link
