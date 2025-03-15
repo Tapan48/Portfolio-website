@@ -38,7 +38,7 @@ const projects: Project[] = [
       // "Tailwind",
     ],
     githubUrl: "https://github.com/Tapan48/SwiftCart",
-    liveUrl: "https://ecommerce-app-olive-chi-40.vercel.app/",
+    liveUrl: "https://swift-cart-eta.vercel.app/",
     imageUrl: "/swiftcart.webp",
   },
 
