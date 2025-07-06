@@ -54,6 +54,11 @@ const skillCategories: SkillCategory[] = [
       { name: "Postman", icon: "postman.svg" },
       { name: "Docker", icon: "docker.svg" },
       { name: "Git", icon: "git.svg" },
+      { name: "Power BI", icon: "powerbi.svg" },
+      { name: "Tableau", icon: "tableau.svg" },
+      { name: "Apache Spark", icon: "apache-spark.svg" },
+      { name: "Apache Kafka", icon: "apache-kafka.svg" },
+    
     ],
   },
 ];

@@ -46,7 +46,7 @@ export function WorkX() {
       skills: ["Express", "Node.js", "MongoDB"],
     },
     {
-      role: "Backend Developer",
+      role: "Database Developer",
       company: "DiligenceAI",
       period: "November 2024 - January 2025",
       description: [
@@ -118,28 +118,26 @@ export function WorkX() {
                   <CardTitle>About Me</CardTitle>
                 </CardHeader>
                 <CardContent className="text-black leading-relaxed">
-                  I am a Full Stack Web Developer with expertise in frontend
-                  development, specializing in the{" "}
-                  <span className="font-bold text-purple-500">MERN</span> and{" "}
-                  <span className="font-bold text-purple-500">Next.js</span>{" "}
-                  stacks. My passion lies in creating intuitive and responsive
-                  user interfaces using{" "}
-                  <span className="font-bold text-purple-500">React</span> and{" "}
-                  <span className="font-bold text-purple-500">Next.js</span>.
-                  With a strong foundation in{" "}
-                  <span className="font-bold text-purple-500">HTML</span>,{" "}
-                  <span className="font-bold text-purple-500">CSS</span>, and{" "}
-                  <span className="font-bold text-purple-500">JavaScript</span>,
-                  I craft seamless and engaging web experiences. While my focus
-                  is on the frontend, I&apos;m also proficient in{" "}
-                  <span className="font-bold text-purple-500">Node.js</span>,{" "}
-                  <span className="font-bold text-purple-500">Express</span>,
-                  and <span className="font-bold text-purple-500">MongoDB</span>
-                  , allowing me to understand and work across the entire web
-                  stack. As a Data Science and AI graduate from IIIT Dharwad, I
-                  bring analytical thinking and data-driven insights to my
-                  development process, enhancing the functionality and user
-                  experience of the applications I build.
+                I am a Data Analyst with expertise in big data processing and visualization, specializing in{" "}
+<span className="font-bold text-purple-500">Python</span> and{" "}
+<span className="font-bold text-purple-500">SQL</span>{" "}
+stacks. My passion lies in creating insightful dashboards and uncovering meaningful patterns using{" "}
+<span className="font-bold text-purple-500">Power BI</span> and{" "}
+<span className="font-bold text-purple-500">Tableau</span>.
+With a strong foundation in{" "}
+<span className="font-bold text-purple-500">Apache Spark</span>,{" "}
+<span className="font-bold text-purple-500">Kafka</span>, and{" "}
+<span className="font-bold text-purple-500">AWS</span>,
+I build scalable data solutions and ETL pipelines. While my focus
+is on data analysis, I'm also proficient in{" "}
+<span className="font-bold text-purple-500">PostgreSQL</span>,{" "}
+<span className="font-bold text-purple-500">MongoDB</span>,
+and <span className="font-bold text-purple-500">Docker</span>
+, allowing me to understand and work across the entire data
+stack. As a Data Science and AI graduate from IIIT Dharwad with
+full-stack development experience, I bring technical implementation
+skills and data-driven insights to solve complex business problems,
+enhancing the functionality and impact of the analytical solutions I build.
                 </CardContent>
               </Card>
             </motion.div>

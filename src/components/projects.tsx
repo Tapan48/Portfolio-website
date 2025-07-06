@@ -41,7 +41,15 @@ const projects: Project[] = [
     liveUrl: "https://swift-cart-eta.vercel.app/",
     imageUrl: "/swiftcart.webp",
   },
-
+  {
+    title: "Whatsapp Chat Analyzer",
+    description:
+      "Built a WhatsApp chat analysis tool processing 100,000+ messages from 50 users using Python, Matplotlib and Seaborn to uncover communication patterns and user engagement insights.",
+    technologies: ["Python", "Matplotlib", "Seaborn"],
+    githubUrl: "https://github.com/Tapan48/Whatsapp-Chat-Analyzer",
+    liveUrl: "https://whatsapp-chat-analyzer-dtkum9nfw89ewg2mfltj6m.streamlit.app/",
+    imageUrl: "/whatsapp.webp",
+  },
   {
     title: "CommunityCove",
     description:
@@ -52,15 +60,17 @@ const projects: Project[] = [
     imageUrl: "/communitycove.webp",
   },
 
-  {
-    title: "Portfolio-Website",
-    description:
-      "Built a personal portfolio website using Next.js and Tailwind CSS, showcasing projects and professional experience.",
-    technologies: ["Next.js", "Tailwind CSS"],
-    githubUrl: "https://github.com/Tapan48/Portfolio-website",
-    liveUrl: "https://tapan-portfolio-smoky.vercel.app/",
-    imageUrl: "/portfolio.webp",
-  },
+  // {
+  //   title: "Portfolio-Website",
+  //   description:
+  //     "Built a personal portfolio website using Next.js and Tailwind CSS, showcasing projects and professional experience.",
+  //   technologies: ["Next.js", "Tailwind CSS"],
+  //   githubUrl: "https://github.com/Tapan48/Portfolio-website",
+  //   liveUrl: "https://tapan-portfolio-smoky.vercel.app/",
+  //   imageUrl: "/portfolio.webp",
+  // },
+
+
 
   /// add pern stack project
 
