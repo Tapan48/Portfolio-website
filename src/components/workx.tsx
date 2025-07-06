@@ -118,26 +118,31 @@ export function WorkX() {
                   <CardTitle>About Me</CardTitle>
                 </CardHeader>
                 <CardContent className="text-black leading-relaxed">
-                I am a Data Analyst with expertise in big data processing and visualization, specializing in{" "}
-<span className="font-bold text-purple-500">Python</span> and{" "}
-<span className="font-bold text-purple-500">SQL</span>{" "}
-stacks. My passion lies in creating insightful dashboards and uncovering meaningful patterns using{" "}
-<span className="font-bold text-purple-500">Power BI</span> and{" "}
-<span className="font-bold text-purple-500">Tableau</span>.
-With a strong foundation in{" "}
-<span className="font-bold text-purple-500">Apache Spark</span>,{" "}
-<span className="font-bold text-purple-500">Kafka</span>, and{" "}
-<span className="font-bold text-purple-500">AWS</span>,
-I build scalable data solutions and ETL pipelines. While my focus
-is on data analysis, I'm also proficient in{" "}
-<span className="font-bold text-purple-500">PostgreSQL</span>,{" "}
-<span className="font-bold text-purple-500">MongoDB</span>,
-and <span className="font-bold text-purple-500">Docker</span>
-, allowing me to understand and work across the entire data
-stack. As a Data Science and AI graduate from IIIT Dharwad with
-full-stack development experience, I bring technical implementation
-skills and data-driven insights to solve complex business problems,
-enhancing the functionality and impact of the analytical solutions I build.
+                  I am a Data Analyst with expertise in big data processing and
+                  visualization, specializing in{" "}
+                  <span className="font-bold text-purple-500">Python</span> and{" "}
+                  <span className="font-bold text-purple-500">SQL</span> stacks.
+                  My passion lies in creating insightful dashboards and
+                  uncovering meaningful patterns using{" "}
+                  <span className="font-bold text-purple-500">Power BI</span>{" "}
+                  and <span className="font-bold text-purple-500">Tableau</span>
+                  . With a strong foundation in{" "}
+                  <span className="font-bold text-purple-500">
+                    Apache Spark
+                  </span>
+                  , <span className="font-bold text-purple-500">Kafka</span>,
+                  and <span className="font-bold text-purple-500">AWS</span>, I
+                  build scalable data solutions and ETL pipelines. While my
+                  focus is on data analysis, I'm also proficient in{" "}
+                  <span className="font-bold text-purple-500">PostgreSQL</span>,{" "}
+                  <span className="font-bold text-purple-500">MongoDB</span>,
+                  and <span className="font-bold text-purple-500">Docker</span>,
+                  allowing me to understand and work across the entire data
+                  stack. As a Data Science and AI graduate from IIIT Dharwad
+                  with full-stack development experience, I bring technical
+                  implementation skills and data-driven insights to solve
+                  complex business problems, enhancing the functionality and
+                  impact of the analytical solutions I build.
                 </CardContent>
               </Card>
             </motion.div>
