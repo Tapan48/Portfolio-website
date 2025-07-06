@@ -133,7 +133,7 @@ export function WorkX() {
                   , <span className="font-bold text-purple-500">Kafka</span>,
                   and <span className="font-bold text-purple-500">AWS</span>, I
                   build scalable data solutions and ETL pipelines. While my
-                  focus is on data analysis, I'm also proficient in{" "}
+                  focus is on data analysis, I&apos;m also proficient in{" "}
                   <span className="font-bold text-purple-500">PostgreSQL</span>,{" "}
                   <span className="font-bold text-purple-500">MongoDB</span>,
                   and <span className="font-bold text-purple-500">Docker</span>,
