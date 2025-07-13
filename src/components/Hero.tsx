@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-const roles = ["Data Analyst", "Tapan Garasangi"];
+const roles = ["Data Engineer", "Data Analyst", "Tapan Garasangi"];
 const TYPING_SPEED = 50;
 const DELETING_SPEED = 50;
 const PAUSE_TIME = 1000;
