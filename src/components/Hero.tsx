@@ -66,10 +66,10 @@ export function Hero() {
     >
       <div className="flex flex-col items-center md:items-start justify-center space-y-8 text-center md:text-left w-full md:w-1/2 md:ml-8 lg:ml-32 -mt-24 md:-mt-32">
         <div className="space-y-3">
-          <h1 className="text-2xl md:text-[28px] lg:text-6xl font-bold text-white">
+          <h1 className="text-2xl md:text-[28px] lg:text-6xl font-bold text-white h-[40px] md:h-[50px] lg:h-[80px] flex items-center">
             Hello, I&apos;m
           </h1>
-          <div className="flex items-center justify-center md:justify-start">
+          <div className="flex items-center justify-center md:justify-start h-[60px] md:h-[80px] lg:h-[120px]">
             <div className="text-3xl md:text-[36px] lg:text-7xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text whitespace-nowrap">
               {text}
             </div>
