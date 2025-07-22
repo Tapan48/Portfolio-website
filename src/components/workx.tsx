@@ -22,7 +22,7 @@ export function WorkX() {
     {
       role: "Frontend Developer",
       company: "Alamnack Technologies",
-      period: "May 2023 - July 2023",
+      period: "May 2023 - August 2023",
       description: [
         "• Developed a **user-friendly platform** for readers to access book content",
 
@@ -37,7 +37,7 @@ export function WorkX() {
     {
       role: "Backend Developer",
       company: "Techjet.ai",
-      period: "January 2024 - May 2024",
+      period: "January 2024 - June 2024",
       description: [
         "• Designed and implemented **5+ RESTful APIs** for the Digi Seva project, integrating with **MongoDB** database handling daily transactions.",
 
@@ -118,7 +118,7 @@ export function WorkX() {
                   <CardTitle>About Me</CardTitle>
                 </CardHeader>
                 <CardContent className="text-black leading-relaxed">
-                  I am a Data Analyst with expertise in big data processing and
+                  I am a Data Engineer with expertise in big data processing and
                   visualization, specializing in{" "}
                   <span className="font-bold text-purple-500">Python</span> and{" "}
                   <span className="font-bold text-purple-500">SQL</span> stacks.
