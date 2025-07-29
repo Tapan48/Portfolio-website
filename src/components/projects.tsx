@@ -24,8 +24,27 @@ interface Project {
 }
 
 const projects: Project[] = [
+  // {
+  //   title: "SwiftCart",
+  //   description:
+  //     "Built a user-friendly e-commerce platform using React.js and Redux, featuring real-time updates and a streamlined cart system.",
+  //   technologies: [
+  //     "React.js",
+  //     "Redux",
+  //     "MongoDB",
+  //     // "TypeScript",
+  //     // "PostgreSQL",
+  //     // "Stripe",
+  //     // "Tailwind",
+  //   ],
+  //   githubUrl: "https://github.com/Tapan48/SwiftCart",
+  //   liveUrl: "https://swift-cart-eta.vercel.app/",
+  //   imageUrl: "/swiftcart.webp",
+  // },
+
+
   {
-    title: "SwiftCart",
+    title: "Stock Screener",
     description:
       "Built a user-friendly e-commerce platform using React.js and Redux, featuring real-time updates and a streamlined cart system.",
     technologies: [
@@ -37,28 +56,40 @@ const projects: Project[] = [
       // "Stripe",
       // "Tailwind",
     ],
-    githubUrl: "https://github.com/Tapan48/SwiftCart",
+    githubUrl: "https://github.com/Tapan48/Stock_Screener",
     liveUrl: "https://swift-cart-eta.vercel.app/",
     imageUrl: "/swiftcart.webp",
   },
   {
     title: "Whatsapp Chat Analyzer",
     description:
-      "Built a WhatsApp chat analysis tool processing 100,000+ messages from 50 users using Python, Matplotlib and Seaborn to uncover communication patterns and user engagement insights.",
+      "Built a WhatsApp chat analysis tool processing 15,000+ messages  from 8 users using Python, Matplotlib and Seaborn to uncover communication patterns and user engagement insights.",
     technologies: ["Python", "Matplotlib", "Seaborn"],
     githubUrl: "https://github.com/Tapan48/Whatsapp-Chat-Analyzer",
-    liveUrl: "https://whatsapp-chat-analyzer-dtkum9nfw89ewg2mfltj6m.streamlit.app/",
+    liveUrl: "https://whatsapp-chat-analyzer-production.up.railway.app/",
     imageUrl: "/whatsapp.webp",
   },
+
+
   {
-    title: "CommunityCove",
+    title: "Loan Default Prediction`",
     description:
       "Built a social media platform with real-time voting and community features. Users can create/view posts, join communities, and participate in voting.",
     technologies: ["React-Query", "Supabase", "PostgreSQL", "Tailwind CSS"],
-    githubUrl: "https://github.com/Tapan48/CommunityCove",
+    githubUrl: "https://github.com/Tapan48/Student-loan-default-analysis",
     liveUrl: "https://social-media-app2-five.vercel.app/",
     imageUrl: "/communitycove.webp",
   },
+
+  // {
+  //   title: "CommunityCove",
+  //   description:
+  //     "Built a social media platform with real-time voting and community features. Users can create/view posts, join communities, and participate in voting.",
+  //   technologies: ["React-Query", "Supabase", "PostgreSQL", "Tailwind CSS"],
+  //   githubUrl: "https://github.com/Tapan48/CommunityCove",
+  //   liveUrl: "https://social-media-app2-five.vercel.app/",
+  //   imageUrl: "/communitycove.webp",
+  // },
 
   // {
   //   title: "Portfolio-Website",
