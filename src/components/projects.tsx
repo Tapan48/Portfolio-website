@@ -42,43 +42,43 @@ const projects: Project[] = [
   //   imageUrl: "/swiftcart.webp",
   // },
 
-
   {
     title: "Stock Screener",
     description:
-      "Built a user-friendly e-commerce platform using React.js and Redux, featuring real-time updates and a streamlined cart system.",
+      "A stock screening application built with Python and React that uses Zerodha Kite Connect API to fetch historical and live stock data, calculate technical indicators, and generate trading signals.",
     technologies: [
-      "React.js",
-      "Redux",
-      "MongoDB",
+      "FastAPI",
+      "React",
+      "Zerodha Kite Connect API",
+      "Python",
+     
       // "TypeScript",
       // "PostgreSQL",
       // "Stripe",
       // "Tailwind",
     ],
     githubUrl: "https://github.com/Tapan48/Stock_Screener",
-    liveUrl: "https://swift-cart-eta.vercel.app/",
-    imageUrl: "/swiftcart.webp",
+    // liveUrl: "https://swift-cart-eta.vercel.app/",
+    imageUrl: "/stock-screener.png", // now a chart icon
   },
   {
     title: "Whatsapp Chat Analyzer",
     description:
       "Built a WhatsApp chat analysis tool processing 15,000+ messages  from 8 users using Python, Matplotlib and Seaborn to uncover communication patterns and user engagement insights.",
-    technologies: ["Python", "Matplotlib", "Seaborn"],
+      technologies: ["Python", "Matplotlib", "Seaborn"],
     githubUrl: "https://github.com/Tapan48/Whatsapp-Chat-Analyzer",
     liveUrl: "https://whatsapp-chat-analyzer-production.up.railway.app/",
     imageUrl: "/whatsapp.webp",
   },
 
-
   {
-    title: "Loan Default Prediction`",
+    title: "Student Loan Default Analysis",
     description:
-      "Built a social media platform with real-time voting and community features. Users can create/view posts, join communities, and participate in voting.",
-    technologies: ["React-Query", "Supabase", "PostgreSQL", "Tailwind CSS"],
+      "Python project analyzing education loan data to predict default risk factors. Identifies high-risk borrowers (54% default rate) using loan-to-income ratios, GPA, and cosigner status. Provides recommendations to reduce defaults by 30% through improved lending criteria and monitoring systems.",
+    technologies: ["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn", "Plotly", "Jupyter Notebook"],
     githubUrl: "https://github.com/Tapan48/Student-loan-default-analysis",
-    liveUrl: "https://social-media-app2-five.vercel.app/",
-    imageUrl: "/communitycove.webp",
+    // liveUrl: "https://social-media-app2-five.vercel.app/",
+    imageUrl: "/loan-default.png", // now a hand with a dollar icon
   },
 
   // {
@@ -100,8 +100,6 @@ const projects: Project[] = [
   //   liveUrl: "https://tapan-portfolio-smoky.vercel.app/",
   //   imageUrl: "/portfolio.webp",
   // },
-
-
 
   /// add pern stack project
 
