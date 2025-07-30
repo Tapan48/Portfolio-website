@@ -51,7 +51,7 @@ const projects: Project[] = [
       "React",
       "Zerodha Kite Connect API",
       "Python",
-     
+
       // "TypeScript",
       // "PostgreSQL",
       // "Stripe",
@@ -59,13 +59,13 @@ const projects: Project[] = [
     ],
     githubUrl: "https://github.com/Tapan48/Stock_Screener",
     // liveUrl: "https://swift-cart-eta.vercel.app/",
-    imageUrl: "/stock-screener.png", // now a chart icon
+    imageUrl: "/stock-screener.png",
   },
   {
     title: "Whatsapp Chat Analyzer",
     description:
       "Built a WhatsApp chat analysis tool processing 15,000+ messages  from 8 users using Python, Matplotlib and Seaborn to uncover communication patterns and user engagement insights.",
-      technologies: ["Python", "Matplotlib", "Seaborn"],
+    technologies: ["Python", "Matplotlib", "Seaborn"],
     githubUrl: "https://github.com/Tapan48/Whatsapp-Chat-Analyzer",
     liveUrl: "https://whatsapp-chat-analyzer-production.up.railway.app/",
     imageUrl: "/whatsapp.webp",
@@ -75,10 +75,19 @@ const projects: Project[] = [
     title: "Student Loan Default Analysis",
     description:
       "Python project analyzing education loan data to predict default risk factors. Identifies high-risk borrowers (54% default rate) using loan-to-income ratios, GPA, and cosigner status. Provides recommendations to reduce defaults by 30% through improved lending criteria and monitoring systems.",
-    technologies: ["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn", "Plotly", "Jupyter Notebook"],
+    technologies: [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Scikit-learn",
+      "Matplotlib",
+      "Seaborn",
+      "Plotly",
+      "Jupyter Notebook",
+    ],
     githubUrl: "https://github.com/Tapan48/Student-loan-default-analysis",
     // liveUrl: "https://social-media-app2-five.vercel.app/",
-    imageUrl: "/loan-default.png", // now a hand with a dollar icon
+    imageUrl: "/student-loan.png",
   },
 
   // {
