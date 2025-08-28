@@ -106,6 +106,7 @@ export function Hero() {
             height={400}
             className="object-cover rounded-full shadow-lg w-full h-full"
             priority
+            unoptimized // Add this prop
           />
         </div>
       </div>
