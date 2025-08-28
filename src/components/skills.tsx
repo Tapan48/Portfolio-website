@@ -86,7 +86,7 @@ export function Skills() {
               style={{ originX: 0 }}
             />
             <span className="relative z-10 text-black dark:text-black">
-              learned in my coding journey
+              learned in my coding journey 
             </span>
           </span>
         </motion.h2>
