@@ -42,34 +42,6 @@ const projects: Project[] = [
   //   imageUrl: "/swiftcart.webp",
   // },
 
-  {
-    title: "Stock Screener",
-    description:
-      "A stock screening application built with Python and React that uses Zerodha Kite Connect API to fetch historical and live stock data, calculate technical indicators, and generate trading signals.",
-    technologies: [
-      "FastAPI",
-      "React",
-      "Zerodha Kite Connect API",
-      "Python",
-
-      // "TypeScript",
-      // "PostgreSQL",
-      // "Stripe",
-      // "Tailwind",
-    ],
-    githubUrl: "https://github.com/Tapan48/Stock_Screener",
-    // liveUrl: "https://swift-cart-eta.vercel.app/",
-    imageUrl: "/stock-screener.png",
-  },
-  {
-    title: "Whatsapp Chat Analyzer",
-    description:
-      "Built a WhatsApp chat analysis tool processing 15,000+ messages  from 8 users using Python, Matplotlib and Seaborn to uncover communication patterns and user engagement insights.",
-    technologies: ["Python", "Matplotlib", "Seaborn"],
-    githubUrl: "https://github.com/Tapan48/Whatsapp-Chat-Analyzer",
-    liveUrl: "https://whatsapp-chat-analyzer-production.up.railway.app/",
-    imageUrl: "/whatsapp.webp",
-  },
 
   {
     title: "Student Loan Default Analysis",
@@ -88,6 +60,36 @@ const projects: Project[] = [
     githubUrl: "https://github.com/Tapan48/Student-loan-default-analysis",
     // liveUrl: "https://social-media-app2-five.vercel.app/",
     imageUrl: "/student-loan.png",
+  },
+  {
+    title: "Whatsapp Chat Analyzer",
+    description:
+      "Built a WhatsApp chat analysis tool processing 15,000+ messages  from 8 users using Python, Matplotlib and Seaborn to uncover communication patterns and user engagement insights.",
+    technologies: ["Python", "Matplotlib", "Seaborn"],
+    githubUrl: "https://github.com/Tapan48/Whatsapp-Chat-Analyzer",
+    liveUrl: "https://whatsapp-chat-analyzer-production.up.railway.app/",
+    imageUrl: "/whatsapp.webp",
+  },
+
+  
+  {
+    title: "Stock Screener",
+    description:
+      "A stock screening application built with Python and React that uses Zerodha Kite Connect API to fetch historical and live stock data, calculate technical indicators, and generate trading signals.",
+    technologies: [
+      "FastAPI",
+      "React",
+      "Zerodha Kite Connect API",
+      "Python",
+
+      // "TypeScript",
+      // "PostgreSQL",
+      // "Stripe",
+      // "Tailwind",
+    ],
+    githubUrl: "https://github.com/Tapan48/Stock_Screener",
+    // liveUrl: "https://swift-cart-eta.vercel.app/",
+    imageUrl: "/stock-screener.png",
   },
 
   // {
