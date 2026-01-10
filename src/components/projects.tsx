@@ -72,25 +72,25 @@ const projects: Project[] = [
   },
 
   
-  {
-    title: "Stock Screener",
-    description:
-      "A stock screening application built with Python and React that uses Zerodha Kite Connect API to fetch historical and live stock data, calculate technical indicators, and generate trading signals.",
-    technologies: [
-      "FastAPI",
-      "React",
-      "Zerodha Kite Connect API",
-      "Python",
+  // {
+  //   title: "Stock Screener",
+  //   description:
+  //     "A stock screening application built with Python and React that uses Zerodha Kite Connect API to fetch historical and live stock data, calculate technical indicators, and generate trading signals.",
+  //   technologies: [
+  //     "FastAPI",
+  //     "React",
+  //     "Zerodha Kite Connect API",
+  //     "Python",
 
-      // "TypeScript",
-      // "PostgreSQL",
-      // "Stripe",
-      // "Tailwind",
-    ],
-    githubUrl: "https://github.com/Tapan48/Stock_Screener",
-    // liveUrl: "https://swift-cart-eta.vercel.app/",
-    imageUrl: "/stock-screener.png",
-  },
+  //     // "TypeScript",
+  //     // "PostgreSQL",
+  //     // "Stripe",
+  //     // "Tailwind",
+  //   ],
+  //   githubUrl: "https://github.com/Tapan48/Stock_Screener",
+  //   // liveUrl: "https://swift-cart-eta.vercel.app/",
+  //   imageUrl: "/stock-screener.png",
+  // },
 
   // {
   //   title: "CommunityCove",
