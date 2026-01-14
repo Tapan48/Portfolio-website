@@ -47,7 +47,7 @@ export function Hero() {
 
   const handleViewResume = () => {
     // Replace this URL with your Google Drive shared link
-    const driveUrl =
+  const driveUrl =
       "https://drive.google.com/file/d/1AnjMZIIi3u0Zp9uwSuiMmiEG_APEMM-v/view?usp=sharing";
     window.open(driveUrl, "_blank");
   };
